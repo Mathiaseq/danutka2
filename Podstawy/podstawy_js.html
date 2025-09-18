@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+<head>
+<meta charset="utf-8">
+<title>Podstawy Języka JavaScript</title>
+</head>
+<body>
+<h1>Podstawy Języka JavaScript</h1>
+<h2>Zmienne</h2>
+<p>Zmienne służą do przechowywania danych i wyników w celu dalszego ich wykorzystania. W języku JavaScript zmienne daklaruje się za pomocą słowa kluczowego <i><b>let, var, const</b></i> poprzedzającego nazwę zmiennej np. let miasto="Warszawa";.</p>
+<h4><i>var, let i const</i> to deklaracje zmiennych w JavaScript. <b><i>'var'</i></b> to najstarszy typ deklaracji, który jest dostępny w JS. Może być używany wielokrotnie i jest widoczny globalnie lub lokalnie w funkcji. <i><b>'let'</b></i> to nowszy typ deklaracji zmiennych, który jest widoczny tylko w obrębie bloku, wysłania instrukcji lub wyrażenia, w którym jest używany. Zmienna deklarowana przy użyciu 'let' może być ponownie przypisana, ale nie można jej ponownie deklarować.<b><i>'const'</i><b> jest podobne do 'let', ale różnica polega na tym, że wartość przypisana do zmiennej deklarowanej za pomocą 'const' nie może być zmieniona, co czyni ją stałym, niezmiennym źródłem wartości.</h4>
+<script type="text/javascript">
+let imie="Krystyna";
+let nazwisko="Nowakowska";
+document.write(imie+"  "+nazwisko);
+</script>
+<h2>Skalarne typy danych</h2>
+<p>Język JavaScript jest językiem słabo typowanym, co oznacza, że w momencie deklarowania zmiennej nie trzeba określać jej typu. Występują typy danych:</p>
+<ul>
+<li>Typ liczbowy <i>number,</i><br>
+Służy do zapisywania liczb. Można zapisywać liczby w formatach wykładniczym, dziesiętnym, ósemkowym i szestnastkowym np. let a=12; let b=037; let c=0xABC; let d=0.12e-2;
+</li>
+<li>Typ łańcuchowy <i>string,</i><br>
+Zawiera ciągi znaków o dowolnej długości. Ciąg znaków musi być umieszczony w ogranicznikach typu cudzysłów lub apostrof np. let imie="Anna";
+</li>
+<li>Typ logiczny <i>boolean</i><br>
+Przyjmuje jedną z dwóch wartości: prawda <i>(true)</i> lub fałsz <i>(false)</i>. Wartości typu logicznego są wykorzystywane przy budowaniu wyrażeń logicznych, porównywaniu danych, określaniu, czy wykonywana operacja zakończyła się sukcesem.
+</li>
+<li>Typ <i>null</i><br>
+Jest to typ specjalny określający wartość pustą <i>(null)</i>. Nie przechowuje zadnej wartości. Ten typ danych jest obiektem.
+
+</li>
+<li>Typ <i>udefined</i><br>
+Jest to typ zawierajacy zmienne, którym nie została nadana żadna wartość. Wartość oraz typ zmiennej nie są znane. np. <b>let x;</b>
+</li>
+</ul>
+<h2>
+Typy danych złożone
+</h2>
+<ol>
+<li>Obiekty<br>
+Służą do reprezentacji obiektów. Wykorzystane są obiekty wbudowane oraz udostępniane przez przeglądarki. Właściwości obiektów są zapisywane w nawiasach klamrowych jako para <i>nazwa: wartość</i> i są oddzielone przecinkami np.<br>
+let osoba={nazwisko:"Nowak", imie:"Krzysztof", wiek:18};
+</li>
+<li>Tablice<br>
+Służą do przechowywania wielu wartości. Tablice są zapisywane w nawiasach kwadratowych, a elementy tablicy są oddzielone przecinkami np.<br>
+let liczby=[10, 23, 57, 94, 32];
+</li>
+</ol>
+<h1>Operatory</h1>
+<p>Operatory w języku JavaScript zostały podzielone na następujące grupy:</p>
+<ol>
+<li>arytmetyczne</li>
+<li>porónania</li>
+<li>bitowe</li>
+<li>logiczne</li>
+<li>przypisania</li>
+<li>pozostałe</li>
+</ol>
+<h3>Operatory arytmetyczne</h3>
+<table border="2">
+<tr><th>Operator</th><th>Działanie</th><th>Przykład</th></tr>
+<tr><td>" + "</td><td>dodawanie</td><td>a + b</td></tr>
+<tr><td>" - "</td><td>odejmowanie</td><td>a - b</td></tr>
+<tr><td>" * "</td><td>mnożenie</td><td>a * b</td></tr>
+<tr><td>" / "</td><td>dzielenie</td><td>a / b</td></tr>
+<tr><td>" % "</td><td>modulo (reszta z dzielenia)</td><td>a % b</td></tr>
+<tr><td>" ++ "</td><td>inkrementacja</td><td>x<sup>++</sup>, <sup>++</sup>x</td></tr>
+<tr><td>" -- "</td><td>dekrementacja</td><td>x<sup>--</sup>, <sup>--</sup>x</td></tr>
+</table>
+<hr>
+<h3>Operatory porównania</h3>
+<table border="2">
+<tr><th>Operator</th><th>Działanie</th><th>Przykład</th></tr>
+<tr><td>" == "</td><td>Wynik true, gdy argumenty są równe</td><td>a == b</td></tr>
+<tr><td>" != "</td><td>Wynik true, gdy argumenty są różne</td><td>a != b</td></tr>
+<tr><td>" === "</td><td>Wynik true, gdy argumenty są tego samego typu i są równe</td><td>a === b</td></tr>
+<tr><td>"!== "</td><td>Wynik true, gdy argumenty są różne i różnego typu</td><td>a !== b</td></tr>
+<tr><td>" > "</td><td>Wynik true, gdy argument pierwszy jest większy od drugiego</td><td>a > b</td></tr>
+<tr><td>" &lt; "</td><td>Wynik true, gdy argument pierwszy jest mniejszy od drugiego</td><td>"a &lt; b"</td></tr>
+<tr><td>" >= "</td><td>Wynik true, gdy argument pierwszy jest większy od drugiego lub jest równy</td><td>a >= b</td></tr>
+<tr><td>" &lt;= "</td><td>Wynik true, gdy argument pierwszy jest mniejszy od drugiego lub jest równy</td><td>"a &lt;= b"</td></tr>
+</table><hr>
+<h3>Operatory bitowe</h3>
+<table border="2">
+<tr><th>Operator</th><th>Działanie</th><th>wyrażenie</th></tr>
+<tr><td>" & "</td><td>iloczyn bitowy (AND)</td><td>a & b</td></tr>
+<tr><td>" | "</td><td>suma bitowa(OR)</td><td>a | b</td></tr>
+<tr><td>" ~ "</td><td>negacja bitowa (NOT)</td><td> ~ a </td></tr>
+<tr><td>" ^ "</td><td>bitowa różnica symetryczna</td><td>a ^ b</td></tr>
+<tr><td>" >> "</td><td>przesunięcie bitowe w prawo</td><td>a >> b</td></tr>
+<tr><td>" << "</td><td>przesunięcie bitowe w lewo</td><td>"a << b"</td></tr>
+<tr><td>" >>>"</td><td>przesunięcie bitowe w prawo z wypełnieniem zerami</td><td>a >>> b</td></tr>
+</table><hr>
+<h3>Operatory logiczne</h3>
+<table border="2">
+<tr><th>Operator</th><th>Działanie</th><th>Przykład</th></tr>
+<tr><td>" && "</td><td>iloczyn logiczny (AND)</td><td>a && b</td></tr>
+<tr><td>" || "</td><td>suma logiczna (OR)</td><td>a || b</td></tr>
+<tr><td>" ! "</td><td>negacja logiczna (NOT)</td><td> !a</td></tr>
+</table><hr>
+<h3>Operatory przypisania</h3>
+<table border="2">
+<tr><th>Operator</th><th>Przykład</th><th>Znaczenie</th></tr>
+<tr><td>" = "</td><td>x = y</td><td>x = y</td></tr>
+<tr><td>" += "</td><td>x += y</td><td>x = x + y</td></tr>
+<tr><td>" -= "</td><td>x -= y</td><td>x = x - y </td></tr>
+<tr><td>" *="</td><td>x *= y</td><td>x = x * y</td></tr>
+<tr><td>" /="</td><td>x /= y</td><td>x = x / y</td></tr>
+<tr><td>" %= "</td><td>x %= y</td><td>x = x % y</td></tr>
+</table><hr>
+<h1>Instrukcja switch</h1>
+<h4>Instrukcja switch jest instrukcją wyboru. Pozwala sprawdzić zestaw warunków i wykonać różne działania w zależności od wyniku porównania<br>
+switch (wyrażenie sprawdzane) {<br>
+case wartość1:<br>
+blok instrukcji 1;<br>
+break;<br>
+case wartość2:<br>
+blok instrukcji 2;<br>
+break;<br>
+case wartość3:<br>
+blok instrukcji 3;<br>
+break;<br>
+default:<br>
+blok instrukcji 4;
+}
+</h4>
+<hr>
+<script type="text/javascript">
+let a=20;
+let b=7;
+switch (a*b) {
+case 10:
+document.write("Wynik mnożenia wynosi 10");
+break;
+case 40:
+document.write("Wynik mnożenia wynosi 40");
+break;
+case 140:
+document.write("Wynik mnożenia wynosi 140");
+break;
+default:
+document.write("Nieznany wynik mnożenia");
+}
+</script>
+<hr>
+<h1>Pętla for</h1>
+<h4>Pętlę typu for wykorzystuje się, gdy znana jest liczba wykonań pętli oraz znany jest warunek, który musi być spełniony aby kolejny raz wykonać pętlę<br>
+for (wyrażenie poczatkowe; wyrażenie warunkowe;wyrażenie modyfikujące) {<br>
+blok instrukcji;<br>
+}<br>
+</h4>
+<hr>
+<script type="text/javascript">
+for (let i=0; i<5; i++){
+document.write("Pętla wykonana "+i+" raz/y<br>")
+}
+</script>
+<hr>
+<h1>Pętla while</h1>
+<p>Pętla <i>while</i> jest zwykle wykorzystywana wtedy, gdy liczba wykonanych powtórzeń nie jest znana. Składnia instrukcji jest natępująca: </p>
+<i> while (wyrażenie warunkowe){<br>
+blok instrukcji<br>
+}</i><br>
+<script type="text/javascript">
+let ilosc=0;
+while (ilosc++<5){
+document.write("Pętla wykonana "+ilosc+ " raz/y<br>");
+
+}
+</script>
+<h3>Zadanie napisz skrypt, który wyświetli powtórzone bloki dowolnego tekstu. Wyświetlenie bloku zakończ dla zmiennej=10. </h3>
+<hr>
+<br>
+<script type="text/javascript">
+let petla=0;
+while (petla++<=10){
+document.write("Uczymy sie pętli while "+petla+ " raz/y<br>");
+
+}
+</script>
+<hr>
+<h1>Pętla do...while</h1>
+Pętla <i> do... while</i> jest odmianą pętli while. Jej składnia jest następująca <br>
+<b><i>do {<br>
+blok instrukcji;<br>
+}<br>
+while (wyrażenie warunkowe);
+</i></b><br>
+Konstrukcja ta oznacza: Wykonuj instrukcje, dopóki wyrażenie warunkowe jest prawdziwe.<br>
+W pętli <i>do... while</i> blok instrukcji jest wykonywany conajmniej raz, nawet jeżeli warunek jest fałszywy - pnieważ najpierw wykonywany jest ciąg instrukcji, a dopiero potem sprawdzany jest warunek.<br>
+<script type="text/javascript">
+let ile=1;
+do{
+document.write("Pętla wykonana "+ile+ " raz/y<br>");
+} while (ile++<=0);
+</script>
+<hr>
+<h1>Instrukcja warunkowa if</h1>
+ <h3>W JavaScript są 2 instrukcje warunkowe, instrukcja warunkowa if, oraz instrukcja warunkowa switch. Instrukcje warunkowe w programowaniu są używane bardzo często.<br>
+
+Instrukcje warunkowe wykonują jakąś instrukcję na podstawie zwracanej wartości warunku, czyli true (prawda) lub false (fałsz). Jeżeli wyrażenie w warunku zwraca true wtedy wykonuje się podana instrukcja kodu. Podstawowa struktura instrukcji if:<br>
+if (warunek) {<br>
+    instrukcjaDoWykonania<br>
+}<br>
+Instrukcję, można jeszcze rozwinąć o blok else if:<br>
+if (warunek) {<br>
+    instrukcjaDoWykonania<br>
+}<br>
+else if (innyWarunek) {<br>
+    innaInstrukcjaDoWykonania<br>
+}<br>
+Jeżeli "warunek" jest spełniony, wykona się podana poniżej instrukcja, jeżeli warunek nie zostanie spełniony, lecz "innyWarunek" zostanie spełniony, wtedy wykona się "innaInstrukcjaDoWykonania". Warunków else if, oczywiście może być więcej niż 1, może ich być nieskończenie wiele. Można jeszcze dodać to tego zapisu else:<br>
+if (warunek) {<br>
+    instrukcjaDoWykonania<br>
+}<br>
+else if (innyWarunek) {<br>
+    innaInstrukcjaDoWykonania<br>
+}<br>
+else {<br>
+    kolejnaInstrukcja<br>
+}<br>
+Który mówi o tym, że jeżeli "warunek" oraz "innyWarunek" nie zostaną spełnione to zawsze wykona się instrukcja zawarta w bloku else". Oczywiście instrukcja warunkowa może równie dobrze zawierać tylko if oraz else.<br>
+
+Najlepiej będzie przedstawić to na konkretnym zadaniu. Załóżmy, że mamy napisać program który na podstawie podanego miesiąca (tylko miesiąca, tak żeby nie wdawać się w szczegóły), wypisuje porę roku.</h3>
+<script type="text/javascript">
+let month = 3;
+if (month > 0 && month <= 3){
+    console.log("Zima");
+} else if (month > 3 && month <= 6) {
+    console.log("Wiosna");
+} else if (month > 6 && month <= 8) {
+    console.log("Lato");
+} else if (month > 8 && month <= 12) {
+    console.log("Jesień");
+} else {
+    console.log("Zły miesiąc.");
+}
+</script>
+<h3>W powyższym przykładzie jeżeli zmienna month będzie równa 1, w konsoli zostanie zapisana "Zima". Dla 6 będzie to "Wiosna", dla 7 "Lato" itd.<br>
+
+Jeżeli w bloku instrukcji jest tylko 1 instrukcja do wykonania, można wtedy pominąć nawiasy klamrowe.</h3>
+<h1>Obiekty</h1>
+<p>JavaScript to język zorientowany obiektowo, udostępnia wiele wbudowanych obiektów. Daje również możliwość odczytywania ich właściwości oraz korzystania z ich metod. Właściwości obiektu reprezentują jego cechy</p>
+<script type="text/javascript">
+let napisz="Witaj w szkole";
+document.write(napisz.toUpperCase() + "<br>");
+document.write("Długość tekstu: "+napisz.length);
+</script>
+<h2>Tworzymy obiekt</h2>
+
+<script type="text/javascript">
+let osoba={
+nazwisko:"Nowacki", imie:"Marek", zawod:"informatyk", 
+
+pokaz:function(){
+document.write(this.nazwisko+' '+this.imie+' zawód: '+this.zawod);
+}
+};
+osoba.pokaz();
+</script>
+<h3>Utwórz w języku JavaScript obiekt opisujący pojazd. Zdefiniuj dla niego nastepujące właściwości: <em>marka, model, rok_produkcji, przebieg</em> oraz metodę <em>wyswietlDane</em></h3>
+<h3> Tworzymy obiekt pojazd</h3>
+<script type="text/javascript">
+let auto={
+marka:"Opel", model:"Corsa", rok_produkcji:"2018", przebieg:"128 tys km",
+
+wyswietlDane:function(){
+document.write(this.marka+' '+this.model+' rocznik: '+this.rok_produkcji+' przebieg: '+this.przebieg+'<br>');
+}
+};
+auto.wyswietlDane();
+
+auto.numer_rej="PZN56432";
+auto.wyswietlDetal=function(){
+document.write(this.marka+' '+this.numer_rej);
+}
+auto.wyswietlDetal();
+</script>
+<h3>Utwórz w języku JavaScript obiekt opisujący dowolny kraj Europy Zdefiniuj dla niego nastepujące właściwości: <em>nazwa, stolica, powierzchnia, ludność</em> oraz metodę <em>wyswietlKraj</em></h3>
+<h3>Tworzenie obiektu za pomocą konstruktora</h3>
+<script type="text/javascript">
+function Klient(nazwisko_k, imie_k, zawod_k){
+this.nazwisko=nazwisko_k;
+this.imie=imie_k;
+this.zawod=zawod_k;
+this.wypisz=function(){
+alert(this.nazwisko+' '+this.imie+' '+this.zawod);
+}
+}
+let osoba1=new Klient('Kowalski','Jan','kierowca');
+let osoba2=new Klient('Nowak', 'Anna', 'sekretarka');
+osoba1.wypisz();
+osoba2.wypisz();
+</script>
+<h1>DOM (Document Object Model to obiektowy model dokmentu, pozwala przeglądarce przekonwertować stronę na strukturę obiektów.)</h1>
+<p> Model DOM składa się z węzłów, które reprezentują różne części dokumentu HTML. </p>
+<ul>
+    <li>Elementy: reprezentują znaczniki HTML (np. p, a, img)</li>
+    <li>Atrybuty: np. src, href, id</li>
+    <li>Węzły tekstowe: tekst wewnątrz elementu np. akapitu</li>
+</ul>
+<h2>Pola i metody DOM pozwalają na interakcje ze stroną<br>
+Właściwości pola: 
+</h2>
+<ul>
+    <li><em>innerHTML: </em> zawartość HTML elementu</li>
+    <li><em>textContent: </em> tekstowa zawartość elementu</li>
+    <li><em>id: </em> identyfikator elementu</li>
+    <li><em>className:</em> nazwa klasy elementu</li>
+</ul>
+<h2> Metody (funckje) pozwalają wykonywać akcje na obiektach DOM </h2>
+<ul>
+    <li><strong>getElementById(): </strong> Pobiera element po jego ID </li>
+    <li><strong>querySelector(): </strong> Pobiera pierwszy element pasujący do selektora </li>
+    <li><strong>addEventListener(): </strong> Dodaje obsługę zdarzenia do elementu </li>
+    <li><strong>createElement(): </strong> Tworzy nowy element HTML </li>
+    <li><strong>appendChild(): </strong> Dodaje element jako dziecko innego elementu </li>
+</ul>
+</body>
+</html>
