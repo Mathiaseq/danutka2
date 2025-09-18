@@ -1,0 +1,39 @@
+*{
+    font-style: Century, Serif;
+    text-align: center;
+}
+header, footer {
+    background-color: Indigo;
+    color: white;
+    padding: 2px;
+    font-style: italic;
+    clear:both;
+}
+section{
+    width: 50%;
+    height: 470px;
+    float: left;
+}
+img{
+    padding: 3px;
+    margin: 10px;
+    border: 2px Dashed SlateBlue;
+}
+a{
+    color: white;
+}
+button{
+    background-color: SlateBlue;
+    color: white;
+    margin: 10px 20px 10px 20px;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+}
+button:hover{
+    background-color: indigo;
+}
+
+input[type="range"] {
+  width: 80%;
+}

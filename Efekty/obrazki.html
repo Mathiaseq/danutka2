@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+
+    <section id="pierwszy">
+        <img src="pszczola.jpg" alt="pszczola na fioletowym kwiatku"><br>
+        <label><input type="radio" name="opcja" value="blur(6px)">Blur</label><br>
+        <label><input type="radio" name="opcja" value="sepia(100%)">Sepia</label><br>
+        <label><input type="radio" name="opcja" value="invert(100%)">Negatyw</label><br>
+        <button onclick="zmienEfekt1()">Zastosuj</button>
+    </section>
+    <section id="drugi">
+        <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="pomarancza">
+        <button onclick="zmienEfekt2()">Kolorowy</button>
+        <button onclick="zmienEfekt3()">Czarno-biały</button>
+    </section>
+    <section id="trzeci">
+        <img src="owoce.jpg" alt="Kosz pełen owoców" id="owoce">
+        <input type="range" min="0" max="100" value="100" id="skala">
+        <button onclick="zmienEfekt4()">Zastosuj</button>
+    </section>
+    <section id="czwarty">
+        <img src="zolw.jpg" alt="Żółw w wodzie" id="zolw">
+        <input type="range" min="0" max="250" id="skala2">
+        <button onclick="zmienEfekt5()">Zastosuj</button>
+    </section>
+
+    <footer>
+        <a href="http://www.css.com">Zobacz inne efekty obrazu
+        <p>Stronę wykonał: 3190381903819</p>
+        </p>
+    </footer>
+</body>
+</html>
