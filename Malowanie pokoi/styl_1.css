@@ -1,0 +1,9 @@
+*{
+    font-family: Cambria;
+}
+header, footer{
+    background-color: #829EB9;
+    color:white;
+    text-align: center;
+    padding: 10px;
+}
