@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Zamówienia hurtowe</title>
     <link rel="stylesheet" type="text/css" href="styl4.css">
+    <script src="skrypt.js"></script>
 </head>
 <body>
     <header id="baner">
@@ -15,17 +16,19 @@
         <img src="obraz.png" alt="sieć komputerowa">
     </section>
     <section id="prawy">
-        <table border="1">
+        <table>
             <tr><th>Produkt</th><th>Jednostka</th><th>Dostępna ilość</th><th>Aktualizacja</th><th>Zamówienie</th></tr>
-            <tr><td>Sketka U/UTP drut</td><td>metr</td><td>20</td><td><button onclick="aktualizuj()">Aktualizuj</button></td><td><button onclick="zamawiam()">Zamów</button></td></tr>
-            <tr><td>Skrętka U/UTP linka</td><td>metr</td><td>2</td><td><button onclick="aktualizuj()">Aktualizuj</button></td><td><button onclick="zamawiam()">Zamów</button></td></tr>
-            <tr><td>Wtyki 808C</td><td>sztuki</td><td>10</td><td><button onclick="aktualizuj()">Aktualizuj</button></td><td><button onclick="zamawiam()">Zamów</button></td></tr>
-            <tr><td>Moduły Keystone</td><td>sztuki</td><td>30</td><td><button onclick="aktualizuj()">Aktualizuj</button></td><td><button onclick="zamawiam()">Zamów</button></td></tr>
+            <tr><td class="produkt">Sketka U/UTP drut</td><td>metr</td><td class="ilosc">20</td><td><button class="aktualizuj">Aktualizuj</button></td><td><button class="zamow">Zamów</button></td></tr>
+            <tr><td class="produkt">Skrętka U/UTP linka</td><td>metr</td><td class="ilosc">2</td><td><button class="aktualizuj">Aktualizuj</button></td><td><button class="zamow">Zamów</button></td></tr>
+            <tr><td class="produkt">Wtyki 808C</td><td>sztuki</td><td class="ilosc">10</td><td><button class="aktualizuj">Aktualizuj</button></td><td><button class="zamow">Zamów</button></td></tr>
+            <tr><td class="produkt">Moduły Keystone</td><td>sztuki</td><td class="ilosc">30</td><td><button class="aktualizuj">Aktualizuj</button></td><td><button class="zamow">Zamów</button></td></tr>
         </table>
+        <script src="skrypt.js" type="text/javascript"></script>
     </section>
     <footer>
         <a href="http://sieci.pl/" target="_blank">Strona internetowa</a>
         <p>Stronę przygotował: 930183901803</p>
     </footer>
+    
 </body>
 </html>
