@@ -27,6 +27,12 @@
         <li>w nazwach można stosować polskie litery</li>
     </ul>
     <h3>Przy odwołaniu się do zmiennej zawsze należy użyć znaku $</h3>
+    <h1>Zmienne predefiniowane</h1>
+    <ul>
+        <li>$_GET[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody GET</li>
+        <li>$_POST[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody POST</li>
+        <li>$_COOKIE[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody cookies()</li>
+    </ul>
 </body>
 </html>
 
@@ -48,4 +54,5 @@ $iloczyn = $a*$b;
 $iloraz = $a/$b;
 $reszta = $a%$b;
 echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: $iloczyn<br> iloraz wynosi: $iloraz<br> reszta z dzielenia wynosi: $reszta</h3>";
+
 ?>
