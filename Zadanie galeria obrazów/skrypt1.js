@@ -27,7 +27,7 @@ function poprzednie(){
         aktualne.src = "5.jpg";
     }
 }
-function nastepny(){
+function nastepne(){
     const aktualne =document.getElementById("obecny");
     numer_zdj++;
     if(numer_zdj==6){

@@ -1,6 +1,6 @@
 let numer_zdj=1;
 
-function zmiena(src, numer){
+function zmiana(src, numer){
     const obecny=document.getElementById("obecny");
     obecny.src=src;
     numer_zdj=numer;
@@ -25,10 +25,9 @@ function poprzednie(){
         case 4:
             aktualne.src="4.jpg";
             break;
-
     }
 }
-function nastepny(){
+function nastepne(){
     const aktualne = document.getElementById("obecny");
     numer_zd++;
     switch(numer_zdj){
