@@ -32,4 +32,12 @@
 
 <?php
 echo "<h2>Mój pierwszy skrypt PHP</h2>";
+$x = 60;
+$y = 7;
+echo $x + $y;
+$zmienna1=374;
+$nazwa_1="to mój tekst";
+$liczba7=26;
+$ilosc=$zmienna1+$zmienna7;
+echo "<h3>Wynik wartości $zmienna1 i $zmienna7 to $ilosc</h3>";
 ?>
