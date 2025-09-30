@@ -36,8 +36,16 @@ $x = 60;
 $y = 7;
 echo $x + $y;
 $zmienna1=374;
-$nazwa_1="to mój tekst";
-$liczba7=26;
+$zmienna7=26;
 $ilosc=$zmienna1+$zmienna7;
 echo "<h3>Wynik wartości $zmienna1 i $zmienna7 to $ilosc</h3>";
+echo "<h3>W języku PHP napisz skrypt, który będzie obliczał sumę, różnicę, iloraz, iloczyn i resztę dzielenia dwóch dowolnych liczb.</h3>";
+$a = 89;
+$b = 56;
+$suma = $a+ $b;
+$roznica = $a - $b;
+$iloczyn = $a*$b;
+$iloraz = $a/$b;
+$reszta = $a%$b;
+echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: $iloczyn<br> iloraz wynosi: $iloraz<br> reszta z dzielenia wynosi: $reszta</h3>";
 ?>
