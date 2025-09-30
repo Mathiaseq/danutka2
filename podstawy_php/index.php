@@ -11,9 +11,24 @@
         <li>Znak otwierajacy - znak mniejszości&lt;?php</li>
         <li>Znak zamykający - ?znak wiekszości - ?></li>
     </ul>
+    <h1>Komentarze</h1>
+    Występujące trzy rodaje komentarzy:
+    <ul>
+        <li>Komentarze blokowe - zaczyna sie od znaku /* i kończy sie */</li>
+        <li>Komentarze jednowierszowe - zaczyna się od znaków // i kończy w bieżącej linii</li>
+        <li>Lp,emtarze jednowierszowe uniksowy - zaczyna sie od znaku # i ciagnie sie do końca linii</li>
+    </ul>
+    <h1>Zmienne</h1>
+    <p>Przed nazwą zmiennej należy umieścić znak $. Warunki jakie muszą być spełnione przy nazwie:</p>
+    <ul>
+        <li>musi zaczynać się od litery lub znaku podrkeślenia</li>
+        <li>może składać sie jedynie z liter, cyfr i znaków podrkęslenia</li>
+        <li>w nazwach rozróżnianie sa duże i małe litery</li>
+        <li>w nazwach można stosować polskie litery</li>
+    </ul>
+    <h3>Przy odwołaniu się do zmiennej zawsze należy użyć znaku $</h3>
 </body>
 </html>
-
 
 <?php
 echo "<h2>Mój pierwszy skrypt PHP</h2>";
