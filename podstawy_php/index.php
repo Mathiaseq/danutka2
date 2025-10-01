@@ -56,3 +56,15 @@ $reszta = $a%$b;
 echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: $iloczyn<br> iloraz wynosi: $iloraz<br> reszta z dzielenia wynosi: $reszta</h3>";
 
 ?>
+<h1>Zmienne predefiniowane</h1>
+<ul>
+    <li>$_GET[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody GET</li>
+    <li>$_POST[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody POST</li>
+    <li>$_COOKIE[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą cookies()</li>
+    <li>$_FILES[] - jest to tablica zawierająca zmienne przesyłane do skryptu podczas przesyłania plików na serwer</li>
+    <li>$_SERVER[] - jest to tablica zawierająca zmienne przesyłane do skryptu przez serwer WWW. Są to dane takie jak wersja serwera, ścieżka do pliku, adres skryptu, qysłane nagłówki.</li>
+    <li>$_ENV[] - jest to tablica zawierająca wartość zmennych środowiskowych serwera</li>
+    <li>$_REQUEST[] - jest to tablica zawierająca zmienne przesyłane do skryptu przez użytkownika. Obejmuje dane z $_GET, $_POST, oraz $_COOKIE</li>
+    <li>$_SESSION[] - jest to tablica zawierająca zmienne zarejestrowane w bieżącej sesji.</li>
+    <li>$_GLOBAL[] - jest to tablica zawierająca odniesienie do kazdej zmiennej utworzonej przez użytkownika, który ma zasięg globalny dla danego skryptu.</li>
+</ul>
