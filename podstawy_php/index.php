@@ -68,3 +68,43 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
     <li>$_SESSION[] - jest to tablica zawierająca zmienne zarejestrowane w bieżącej sesji.</li>
     <li>$_GLOBAL[] - jest to tablica zawierająca odniesienie do kazdej zmiennej utworzonej przez użytkownika, który ma zasięg globalny dla danego skryptu.</li>
 </ul>
+
+<h1>Typy danych</h1>
+<h3>Wystepujące w PHP typy danych można podzielić na trzy rodzaje:</h3>
+<ol>
+    <li>Typy skalarne, czyli typy proste. Należą do nich:
+        <ul>
+            <li>typ boolean, Jest to typ logiczny. Przyjmujący jedną z dwóch wartośći: prawda fałsz</li>
+            <li>typ integer, Jest to typ całkowitych. Może służyć do przestawiania dodatnich lub ujemnych liczb całkowitych.<br> Przykłady zapisu liczb całkowitych w różnych formach:</li>
+            <ol>
+                <li>537 - dodatnia liczba całkowita</li>
+                <li>-451 - ujemna liczba całkowita</li>
+                <li> 032 - dodatnia liczba całkowita zapisana w formacie ósemkowym</li>
+                <li>-021 - ujemna liczba całkowita zapisana w formacie ósemkowym</li>
+                <li>0XFF - dodatnia liczba całkowita zapisana w formacie szesnastkowym</li>
+                <li>0x0C - ujemna liczba całkowita zapisana w formacie szesnastkowym</li>
+            </ol>
+            <li>typ float lub, double jest to liczba zmenno przeciknowa (rzeczywista) przykład 1,47; 0,17E2</li>
+            <li>typ string, jest to typ łańcucha znaków, który służy do przedstawiania ciągu znaków. pojedynczy znak ciągu jest zapamiętywany w jendym bajcie. Łańcuch znaków można utworzyć, korzystając z jednego z czterach sposobów:</li>
+            <ul>
+                <li>zapisanie ciągu znaków w apostrofach</li>
+                <li>zapisanie ciągu znaków w cudzysłońach</li>
+                <li>używają składni <i>heredoc</i>
+                <?php
+                $napis = 'Dziś poprawia się pogoda';
+                $tekst =<<<TX
+                Tutaj rozpoczyna się $napis
+                TX;
+                echo $tekst;
+                ?>
+                </li>
+        </ul>
+    </li>
+</ol>
+<h1>Funkcje języka PFP do obsługi bazy danych MySQLi</h1>
+<table>
+    <tr><th>Funckje biblioteki mysqli</th><th>Zwracana wartość</th></tr>
+    <tr><td>mysqli_connect(server, użytkownik, hasło, nazwa_bazy)</td><td>id połączenia lub FALSE, gdy niepowodzenie</td></tr>
+    <tr><td>mysqli_select_db(id_polaczenia, nazwa_bazy)</td><td>True/False w zależności od stanu operacji</td></tr>
+    <tr><td>mysqli_error(id_polaczenia)</td><td>Tekst komunikatu błędu</td></tr>
+</table>
