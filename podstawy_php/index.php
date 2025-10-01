@@ -107,4 +107,11 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
     <tr><td>mysqli_connect(server, użytkownik, hasło, nazwa_bazy)</td><td>id połączenia lub FALSE, gdy niepowodzenie</td></tr>
     <tr><td>mysqli_select_db(id_polaczenia, nazwa_bazy)</td><td>True/False w zależności od stanu operacji</td></tr>
     <tr><td>mysqli_error(id_polaczenia)</td><td>Tekst komunikatu błędu</td></tr>
+    <tr><td>mysqli_close(id_polaczenia)</td><td>TRUE/FALSE w zależności od stanu operacji</td></tr>
+    <tr><td>mysqli_query(id_polaczenia, zapytanie)</td><td>wynik zapytania</td></tr>
+    <tr><td>mysqli_fetch_row(wynik zapytania)</td><td>tablica numeryczna odpowiadająca wierszowi zapytania</td></tr>
+    <tr><td>mysqli_fetch_array(wynik_zapytania)</td><td>tablica zawierająca kolejny wierssz z podanych w wyniku zapytania lub FALSE, jeżeli nie ma więcej wierszy w wyniku zapytania</td></tr>
+    <tr><td>mysqli_num_rows(wynik_zapytania)</td><td> liczba wierszy w podanym zapytaniu</td></tr>
+    <tr><td>mysqli_num_fields(wynik_zapytania)</td><td> liczba kolumn w podanym zapytaniu</td></tr>
+    <tr><td>isset($zmienna)</td><td>TRUE/FALSE w zależności od tego, czy $zmienna istnieje</td></tr>
 </table>
