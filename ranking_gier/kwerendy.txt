@@ -1,0 +1,11 @@
+Zapytanie 1: SELECT `id`, `nazwa`, `zdjecie` FROM `gry`;
+Zapytanie 2: SELECT `nazwa`, substring(opis, 1, 100) AS "opisNowy", `punkty`, `cena` FROM `gry` WHERE id =1;
+Zapytanie 3:  
+Zapytanie 4: 
+ 
+ 
+ 
+ 
+ 
+ 
+  
