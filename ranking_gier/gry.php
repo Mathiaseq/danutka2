@@ -25,12 +25,20 @@
     </section>
     <section id="prawy">
     <h3>Dodaj nową grę</h3>
-    <form action="dodaj.php" method="POST">
-
+    <form action="gry.php" method="POST">
+    nazwa<br><input type="text" name="nazwa"><br>
+    opis<br><input type="text" name="opis"><br>
+    punkty<br><input type="text" name="punkty"><br>
+    cena<br><input type="text" name="cena"><br>
+    zdjecie<br><input type="text" name="zdjecie"><br>
+    <button onclick="dodaj()">DODAJ PLS </button>
     </form>
     </section>  
     <footer>
-
+    <form action="gry.php" method="POST">
+    <input type="number"><button type="submit">Pokaż opis</button>
+    skrypt3
+    </form>
     </footer>
 </body>
 </html>
