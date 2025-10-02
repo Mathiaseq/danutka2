@@ -6,7 +6,7 @@
 header {
     background-color: Indigo;
     text-align: center;
-    margin: 2px;
+    padding: 2px;
 }
 
 #lewy, #prawy {
@@ -30,6 +30,11 @@ header {
         width:60%;
         float:left;
     }
+}
+@media(max-width:799px){
+        #lewy,#prawy,#srodkowy{
+            clear:both;
+        }
 }
 
 footer {
