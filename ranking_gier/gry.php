@@ -18,7 +18,7 @@
         $wynik3=mysqli_query($link,$zap3) or die(mysqli_error($link));
         while($element=mysqli_fetch_array($wynik3))
         {
-            echo "<li>".$wiersz3['nazwa']." - ".$wiersz3['punkty']."</li>";
+            echo "<li>".$element[0]."<span id='punkty'>".$element[1]."</span></li>";
         }
         ?>
     </ul>
