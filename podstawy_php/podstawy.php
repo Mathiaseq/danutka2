@@ -33,8 +33,7 @@
         <li>$_POST[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody POST</li>
         <li>$_COOKIE[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody cookies()</li>
     </ul>
-</body>
-</html>
+
 
 <?php
 echo "<h2>Mój pierwszy skrypt PHP</h2>";
@@ -142,3 +141,5 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
         <li>Zastosowania: Uzywana do przesyłania danych w formualrzach (np. podczas logowania), dłuższych tekstów, danych do nazwa_bazy
             czy uploadu plików.</li>
     </ul>
+</body>
+</html>
