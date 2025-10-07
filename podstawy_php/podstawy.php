@@ -121,7 +121,24 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
     (GET do pobierania, POST do wysyłania lub operacji modyfikujących dane).</h3>
     <h2>$_GET[]</h2>
     Sposób przesyłania danych:<br>
-    <ul><li>Dane są dołączane jako parametry do adresu URL (np. strona.php?klucz=wartosc).</li>
-        <li>Widoczność: Dane sa jawen i widoczne w pasku adresu przeglądarki, co zwieksza ryzyko ich wykradzenia.</li>
-        <li>Ograniczenie długości: metoda </li>        
-</ul>
+    <ul>
+        <li>Dane są dołączane jako parametry do adresu URL (np. strona.php?klucz=wartosc).</li>
+        <li>Widoczność: Dane są jawne i widoczne w pasku adresu przeglądarki, co zwieksza ryzyko ich wykradzenia.</li>
+        <li>Ograniczenie długośi: Metoda GET ma ograniczenie długości przesyłanych danych (zazwyczaj około 255 znaków).</li>
+        <li>Bezpieczeństwo: Nie nadaje sie do przesyłania poufnych informacji, takich jak hasła, ponieważ są one widoczen w historii
+            przeglądarki i logach serwera.</li>
+        <li>Zastosowania: Używana do wysyłania dancyh, które są pobierane, np. w wyszukiwarkach, przy zmianie strony w paginacji
+            czy do odnośników.</li>
+    </ul>
+    <h2>$_POST[]</h2>
+    Sposób przesyłania danych:<br>
+    <ul>
+        <li>Dane są przesyłane w treści żądania HTTPm poza adresem URL, co zapewnia większą poufność.</li>
+        <li>Widoczność: Dane nie jest widoczne w adresie URL ani w historii przeglądarki, co czyni je bardziej dyskretnymi</li>
+        <li>Ograniczenie długości: Brak ograniczeina długości przesyłanych danych, co pozwala na wysyłanie dużych
+            ilości informacji, w tym plikow.</li>
+        <li>Bezpieczeństwo: Lepiej nadaje się do przesyłania poufnych danych i operacji modyfikujących dane, takich jak logowanie
+            wysyłanie danych do bazy czy przesyłanie plików</li>
+        <li>Zastosowania: Uzywana do przesyłania danych w formualrzach (np. podczas logowania), dłuższych tekstów, danych do nazwa_bazy
+            czy uploadu plików.</li>
+    </ul>
