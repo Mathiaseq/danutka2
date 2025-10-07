@@ -115,3 +115,13 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
     <tr><td>mysqli_num_fields(wynik_zapytania)</td><td> liczba kolumn w podanym zapytaniu</td></tr>
     <tr><td>isset($zmienna)</td><td>TRUE/FALSE w zależności od tego, czy $zmienna istnieje</td></tr>
 </table>
+<h1>Główne różnice między $_POST[] i $_GET[]</h1>
+<h3>W PHP to sposób przesyłania danych (URL vs. ciało żądania), ich widoczność i
+    (jawne vs. ukryte), ograniczenia długości (GET jest ograniczony, POST nie) oraz przeznaczenie 
+    (GET do pobierania, POST do wysyłania lub operacji modyfikujących dane).</h3>
+    <h2>$_GET[]</h2>
+    Sposób przesyłania danych:<br>
+    <ul><li>Dane są dołączane jako parametry do adresu URL (np. strona.php?klucz=wartosc).</li>
+        <li>Widoczność: Dane sa jawen i widoczne w pasku adresu przeglądarki, co zwieksza ryzyko ich wykradzenia.</li>
+        <li>Ograniczenie długości: metoda </li>        
+</ul>
