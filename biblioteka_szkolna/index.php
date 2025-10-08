@@ -15,18 +15,14 @@
         <table>
             <tr><th>Autor</th><th>Tytuł</th><th>Katalog</th></tr>
             <?php
-      $polaczenie = mysqli_connect('localhost','root','','biblioteka');
-      $zapytanie = "SELECT autor, tytul, kod FROM ksiazki ORDER BY RAND() LIMIT 5";
-      $wynik = mysqli_query($polaczenie, $zapytanie);
-      while ($wiersz = mysqli_fetch_row($wynik)) {
-        echo '<tr>';
-        echo '<td>'.htmlspecialchars($wiersz[0]).'</td>';
-        echo '<td>'.htmlspecialchars($wiersz[1]).'</td>';
-        echo '<td>'.htmlspecialchars($wiersz[2]).'</td>';
-        echo '</tr>';
-      }
-      mysqli_close($polaczenie);
-         ?>
+            $link=mysqli_connect("localhost","root","","biblioteka");
+            $zap4= "SELECT autor, tytul, kod FROM ksiazki ORDER BY RAND() LIMIT 5";
+            $wynik = mysqli_query($link, $zap4);
+            while ($wiersz = mysqli_fetch_array($wynik)){
+                echo "<tr><td>$wiersz[0]</td><td>$wiersz[1]</td><td>$wiersz[2]</td></tr>";
+            }
+            mysqli_close($link);
+            ?>
         </table>
     </section>
      <main>
