@@ -1,0 +1,1 @@
+SELECT `autor`, `tytul`, `kod` FROM `ksiazki` ORDER BY RAND() LIMIT 5;
