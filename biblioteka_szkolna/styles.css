@@ -13,7 +13,6 @@ header, footer{
 article{
     padding-top:40px;
     margin: 1%;
-    display: flex;
 }
 @media (min-width: 800px) {
     article {
@@ -46,8 +45,12 @@ table{
     width:70%;
     text-align: center;
     border: 1px solid steelblue;
+    display:flex;
 }
 tr:hover{
     background-color: steelblue;
     color:white;
+}
+section{
+    text-align: center;
 }
