@@ -15,16 +15,15 @@ article{
     margin: 1%;
     display: flex;
 }
-article img{
-    width:70%;
-    display:block;
-    margin: 0 auto;
+@media (min-width: 800px) {
+    article {
+        float: left;
+        width: 30%;
+    }
 }
-article p{
-    padding: 20px;
-}
-@media (max-width: 799px){
-    article{
+@media (max-width: 799px) {
+    article {
         width: 98%;
+        clear: both;
     }
 }
