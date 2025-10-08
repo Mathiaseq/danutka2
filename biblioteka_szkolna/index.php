@@ -12,10 +12,10 @@
     </header>
     <section>
         <h3>Nasze dzisiejsze propozycje</h3>
-        <table border="1">
+        <table>
             <tr><th>Autor</th><th>Tytuł</th><th>Katalog</th></tr>
             <?php
-                
+
             ?>
         </table>
     </section>

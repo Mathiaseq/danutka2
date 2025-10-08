@@ -1,0 +1,17 @@
+*{
+    font-family: Roboto, Arial, sans-serif;
+    text-align: center;
+}
+body{
+    background-color: lightcyan;
+}
+header, footer{
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+}
+article{
+    padding-top:40px;
+    margin: 1%;
+    display: flex;
+}
