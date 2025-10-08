@@ -1,56 +1,86 @@
-*{
-    font-family: Roboto, Arial, sans-serif;
-    text-align: center;
+* {
+  box-sizing: border-box;
 }
-body{
-    background-color: lightcyan;
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  text-align: center;
+  background-color: LightCyan;
+  margin: 0;
 }
-header, footer{
-    background-color: steelblue;
-    color: white;
-    padding: 10px;
+
+header,
+footer {
+  background-color: SteelBlue;
+  color: white;
+  padding: 10px;
 }
-article{
-    padding-top:40px;
-    margin: 1%;
+
+header h2 {
+  margin: 0;
 }
-@media (min-width: 800px) {
-    article {
-        float: left;
-        width: 30%;
-    }
+
+section {
+  padding: 10px;
 }
+
+table {
+  margin: 0 auto;
+  width: 70%;
+  border-collapse: collapse;
+  border: 1px solid SteelBlue;
+}
+
+table th,
+table td {
+  padding: 6px 10px;
+  border: 1px solid SteelBlue;
+}
+
+table tr:hover {
+  background-color: SteelBlue;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+article {
+  padding-top: 40px;
+  margin: 1%;
+  width: 30%;
+  background-clip: padding-box;
+}
+
+article img {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+article p {
+  padding: 20px;
+}
+
+#lewy {
+  background-color: DodgerBlue;
+}
+
+#srodkowy {
+  background-color: LimeGreen;
+}
+
+#prawy {
+  background-color: DarkOrchid;
+}
+
+
 @media (max-width: 799px) {
-    article {
-        width: 98%;
-        clear: both;
-    }
-}
-#lewy{
-    background-color: dodgerblue;
-}
-#prawy{
-    background-color: limegreen;
-}
-#srodkowy{
-    background-color: darkorchid;
-}
-img{
-    width:70%;
-}
-p{
-    padding:20px;
-}
-table{
-    width:70%;
-    text-align: center;
-    border: 1px solid steelblue;
-    display:flex;
-}
-tr:hover{
-    background-color: steelblue;
-    color:white;
-}
-section{
-    text-align: center;
+  article {
+    width: 98%;
+  }
 }

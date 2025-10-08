@@ -15,22 +15,34 @@
         <table>
             <tr><th>Autor</th><th>Tytuł</th><th>Katalog</th></tr>
             <?php
-
-            ?>
+      $polaczenie = mysqli_connect('localhost','root','','biblioteka');
+      $zapytanie = "SELECT autor, tytul, kod FROM ksiazki ORDER BY RAND() LIMIT 5";
+      $wynik = mysqli_query($polaczenie, $zapytanie);
+      while ($wiersz = mysqli_fetch_row($wynik)) {
+        echo '<tr>';
+        echo '<td>'.htmlspecialchars($wiersz[0]).'</td>';
+        echo '<td>'.htmlspecialchars($wiersz[1]).'</td>';
+        echo '<td>'.htmlspecialchars($wiersz[2]).'</td>';
+        echo '</tr>';
+      }
+      mysqli_close($polaczenie);
+         ?>
         </table>
     </section>
-    <main>
-        <article id="lewy">
-            <img src="ksiazka1.jpg" alt="okładka książki">
-        </article>
-        <article id="srodkowy">
-            <img src="ksiazka2.jpg" alt="okładka książki">
-        </article> 
-        <article id="prawy">
-            <img src="ksiazka3.jpg" alt="okładka książki">
-        </article>
-        <p></p>
-    </main>
+     <main>
+    <article id="niebieski">
+      <img src="ksiazka1.jpg" alt="okładka książki">
+      <p>Według różnych podań najpaskudniejsza ropucha nosi w głowie piękny, cenny klejnot.</p>
+    </article>
+    <article id="zielony">
+      <img src="ksiazka2.jpg" alt="okładka książki">
+      <p>Panna Stefcia i Maryla nie są to zbyt grzeczne damy, nawet nie słuchają mamy...</p>
+    </article>
+    <article id="fioletowy">
+      <img src="ksiazka3.jpg" alt="okładka książki">
+      <p>Ratuj mnie, przyjacielu, w ostatniej potrzebie: Kocham piękną Irenę. Rodzice i ona...</p>
+    </article>
+  </main>
     <footer>Stronę wykonał: 138971984719</footer>
 </body>
 </html>
