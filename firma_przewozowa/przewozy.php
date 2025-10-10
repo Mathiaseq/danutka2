@@ -23,8 +23,8 @@
                 <?php
                 $link = mysqli_connect('localhost', 'root', '', 'przewozygr1');
                 $zap1 = "SELECT `id_zadania`, `zadanie`, `data` FROM zadania;";
-                $wynik1 = mysqli_query($link, $zap1);
-                while ($row = mysqli_fetch_array($wynik1)) {
+                $result = mysqli_query($link, $zap1);
+                while ($row = mysqli_fetch_array($result)) {
                     echo "<tr>";
                     echo "<td>" . htmlspecialchars($row['zadanie']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['data']) . "</td>";
@@ -45,7 +45,7 @@
                 <input type="date" name="data"><br>
                 <input type="submit" value="Dodaj">
             </form>
-            <?php
+             <?php
             $zadanie=$_POST["zadanie"]??NULL;
             $data = $_POST["data"]??NULL;
             if(isset($_POST["submit"])) {
@@ -55,6 +55,8 @@
             }
             mysqli_close($link);
             ?>
+
+            
         </section>
         <section id="prawa">
             <img src="auto.png" alt="auto firmowe">
