@@ -1,0 +1,10 @@
+zapytanie1:
+SELECT id, tytul FROM ksiazka WHERE gatunek='liryka';
+zapytanie2:
+SELECT k.tytul, w.id_cz,w.data_odd FROM ksiazka k, wypozyczenia w WHERE w.id_ks=k.id ORDER BY data_odd ASC LIMIT 15;
+zapytanie3:
+ALTER TABLE ksiazka ADD COLUMN rezerwacja TINYINT(1) DEFAULT 0;
+zapytanie4:
+UPDATE ksiazka SET rezerwacja=1 WHERE id=1;
+zapytanie5:
+SELECT tytul FROM ksiazka WHERE id=4;
