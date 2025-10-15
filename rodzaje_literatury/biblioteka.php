@@ -17,7 +17,7 @@
 <section id="pierwszy">
     <h2>Liryka</h2>
     <form action="biblioteka.php" method="POST">
-        <select></select>skrypt2
+        <select></select>skrypt1
         <button type="submit">Rezerwuj</button>
     </form>
     skrypt3
