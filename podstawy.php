@@ -33,7 +33,8 @@
         <li>$_POST[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody POST</li>
         <li>$_COOKIE[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody cookies()</li>
     </ul>
-
+</body>
+</html>
 
 <?php
 echo "<h2>Mój pierwszy skrypt PHP</h2>";
@@ -57,7 +58,7 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
 ?>
 <h1>Zmienne predefiniowane</h1>
 <ul>
-    <li>$_GET[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody GET</li>
+    <li>$_GET[OUT] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody GET</li>
     <li>$_POST[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą metody POST</li>
     <li>$_COOKIE[] - jest to tablica zawierająca zmienne przesyłane do skryptu za pomocą cookies()</li>
     <li>$_FILES[] - jest to tablica zawierająca zmienne przesyłane do skryptu podczas przesyłania plików na serwer</li>
@@ -101,7 +102,7 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
     </li>
 </ol>
 <h1>Funkcje języka PFP do obsługi bazy danych MySQLi</h1>
-<table>
+<table border="1">
     <tr><th>Funckje biblioteki mysqli</th><th>Zwracana wartość</th></tr>
     <tr><td>mysqli_connect(server, użytkownik, hasło, nazwa_bazy)</td><td>id połączenia lub FALSE, gdy niepowodzenie</td></tr>
     <tr><td>mysqli_select_db(id_polaczenia, nazwa_bazy)</td><td>True/False w zależności od stanu operacji</td></tr>
@@ -114,32 +115,27 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
     <tr><td>mysqli_num_fields(wynik_zapytania)</td><td> liczba kolumn w podanym zapytaniu</td></tr>
     <tr><td>isset($zmienna)</td><td>TRUE/FALSE w zależności od tego, czy $zmienna istnieje</td></tr>
 </table>
-<h1>Główne różnice między $_POST[] i $_GET[]</h1>
-<h3>W PHP to sposób przesyłania danych (URL vs. ciało żądania), ich widoczność i
-    (jawne vs. ukryte), ograniczenia długości (GET jest ograniczony, POST nie) oraz przeznaczenie 
-    (GET do pobierania, POST do wysyłania lub operacji modyfikujących dane).</h3>
-    <h2>$_GET[]</h2>
-    Sposób przesyłania danych:<br>
+<footer>Design strony: Norbert Sz.</footer>
+<h1>Funkcja header()</h1>
+<h3>W PHP służy do wysyłania surowych nagłówków HTTP do przeglądarki klienta, co pozwala na kontrolę nad komunikacją między 
+    serwerem a przeglądarką, np. do przekierowania użytkownika pod inny adres URL, ustawienia typu zawartości strony czy 
+    zarządzania sesjami. kluczowe jest, aby wywoływać tę funkcję przed wysłaniem jakiejkolwiek innej treści
+    (HTML, znaki białej przestrzeni), ponieważ nagłówki muszą być wysłanie przed ciałem odpowiedzi HTTP.</h3>
+    <h2>Jak działa funkcja header()</h2>
     <ul>
-        <li>Dane są dołączane jako parametry do adresu URL (np. strona.php?klucz=wartosc).</li>
-        <li>Widoczność: Dane są jawne i widoczne w pasku adresu przeglądarki, co zwieksza ryzyko ich wykradzenia.</li>
-        <li>Ograniczenie długośi: Metoda GET ma ograniczenie długości przesyłanych danych (zazwyczaj około 255 znaków).</li>
-        <li>Bezpieczeństwo: Nie nadaje sie do przesyłania poufnych informacji, takich jak hasła, ponieważ są one widoczen w historii
-            przeglądarki i logach serwera.</li>
-        <li>Zastosowania: Używana do wysyłania dancyh, które są pobierane, np. w wyszukiwarkach, przy zmianie strony w paginacji
-            czy do odnośników.</li>
+        <li>Wysyłanie nagłówków: Funkcja header() pozwala na wysłanie dowolnego, poprawnego nagłówka HTTP, który 
+            przeglądarka lub inny klient HTTP przetworzy.</li>
+        <li>Przekierowania: Jest najczęściej używana do przekierowania użytkownika na inny adres URL na przykład po udanym 
+            zalogowaniu lub zmianie struktury strony.</li>
+        <li>Ustawienia typu zawartości: Pozwala na określenie typu zawartości przesyłanych danych 
+            (np. Content-Type: application/json), co jest kluczowe w komunikacji z innymi systemami lub aplikacjami.</li>
+        <li>Zarządzanie sesjami i pamięcią podręczną: Służy do zarządzania plikami cookie i ustawieniami pamięci podręcznej
+            co wpływa na działanie strony w przeglądarce</li>
     </ul>
-    <h2>$_POST[]</h2>
-    Sposób przesyłania danych:<br>
-    <ul>
-        <li>Dane są przesyłane w treści żądania HTTPm poza adresem URL, co zapewnia większą poufność.</li>
-        <li>Widoczność: Dane nie jest widoczne w adresie URL ani w historii przeglądarki, co czyni je bardziej dyskretnymi</li>
-        <li>Ograniczenie długości: Brak ograniczeina długości przesyłanych danych, co pozwala na wysyłanie dużych
-            ilości informacji, w tym plikow.</li>
-        <li>Bezpieczeństwo: Lepiej nadaje się do przesyłania poufnych danych i operacji modyfikujących dane, takich jak logowanie
-            wysyłanie danych do bazy czy przesyłanie plików</li>
-        <li>Zastosowania: Uzywana do przesyłania danych w formualrzach (np. podczas logowania), dłuższych tekstów, danych do nazwa_bazy
-            czy uploadu plików.</li>
-    </ul>
+    <h2>Przekierowanie na inny adres URL:</h2>
+    <?php
+    header("Location: http://www.example.com/nowa-strona.php");
+    exit();  // ważne, aby przerwać dalsze działanie skryptu po przekierowaniu
+    ?> 
 </body>
 </html>
