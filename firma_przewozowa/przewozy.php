@@ -51,6 +51,7 @@
             if(isset($_POST["submit"])) {
                 $zap2 = "INSERT INTO `zadania`(`zadanie`, `data`, `osoba_id`) VALUES('spotkanie_firmowe', '2024-05-10',1)";
                 $wynik2 = mysqli_query( $link, $zap2);
+                header("location: przewozy.php");
 
             }
             mysqli_close($link);
