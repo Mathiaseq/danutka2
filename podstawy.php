@@ -134,8 +134,8 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
     </ul>
     <h2>Przekierowanie na inny adres URL:</h2>
     <?php
-    header("Location: http://www.example.com/nowa-strona.php");
-    exit();  // ważne, aby przerwać dalsze działanie skryptu po przekierowaniu
+    //header: "Location: http://www.example.com/nowa-strona.php";
+    //exit();  ważne, aby przerwać dalsze działanie skryptu po przekierowaniu
     ?> 
 </body>
 </html>
