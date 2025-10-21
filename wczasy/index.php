@@ -54,7 +54,17 @@
         </aside>
         <section>
             <h3>Wycieczki</h3>
-            skrypt 3
+            <?php
+                $zap3="SELECT nazwa, cena, link_obraz FROM miejsca WHERE link_obraz LIKE '0%';";
+                $wynik3=mysqli_query($link,$zap3);
+                while ($wiersz=mysqli_fetch_array($wynik3)){
+                    echo"<div class='wycieczka'>";
+                    echo"<img src='$wiersz[1]' alt='Zdjecie z wycieczki'>";
+                    echo"<h2>$wiersz[0]</h2>";
+                    echo"<p>$wiersz[2]</p></div>";
+                }
+                mysqli_close($link);
+            ?>
         </section>
     </main>
     <footer>
