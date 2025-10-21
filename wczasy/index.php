@@ -18,8 +18,10 @@
             <h3>Twój cel wyprawy</h3>
             <form action="index.php" method="POST">
                 <label>Miejsce wycieczki<br>
-                <select nam="" id="">
-                    srypt1
+                <select>
+                    <?php
+                       $link=mysqli_connect("localhost","root","","wyprawy"); 
+                    ?>
                 </select>
             </label>
             <label>Ile dorosłych?<br><input type="number"><br>
