@@ -17,8 +17,8 @@
         <aside>
             <h3>Twój cel wyprawy</h3>
             <form action="index.php" method="POST">
-                <label>Miejsce wycieczki<br>
-                <select>
+                <label for="miejsce">Miejsce wycieczki</label>
+                    <select name="miejsce" id="miejsce">
                     <?php
                        $link=mysqli_connect("localhost","root","","wyprawy"); 
                        $zap1="SELECT nazwa FROM miejsca ORDER BY nazwa ASC";
@@ -29,14 +29,25 @@
                     ?>
                 </select>
             </label>
-            <label>Ile dorosłych?<br><input type="number"><br>
-            </label>
-            <label>Ile dzieci?<br><input type="number"><br></label>
-            <label>Termin<br><input type="date"><br></label>
-            <button type="submit">Symulacja ceny</button>
+            <label>Ile dorosłych?<br><input type="number" name="ileDoroslych"><br></label>
+            <label>Ile dzieci?<br><input type="number" name="ileDzieci"><br></label>
+            <label>Termin<br><input type="date" name="termin"><br></label>
+            <button type="submit" name="submit">Symulacja ceny</button>
             </form>
             <h4>Koszt wycieczki</h4>
-            skrypt 2
+            <?php
+                if(isset($_POST["submit"])){
+                    $ileDoroslych = $_POST["ileDoroslych"]??NULL;
+                    $ileDzieci = $_POST["ileDzieci"]??NULL;
+                    $termin = $_POST["termin"]??NULL;
+                    $miejsce = $_POST["miejsce"]??NULL;
+                    if(isset($miejsce)){
+                        $zap2="SELECT cena FROM miejsca WHERE nazwa = '$miejsce';";
+                        $wynik2=mysqli_query($link,$zap2);
+
+                    }
+                }
+            ?>
         </aside>
         <section>
             <h3>Wycieczki</h3>
