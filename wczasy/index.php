@@ -44,7 +44,10 @@
                     if(isset($miejsce)){
                         $zap2="SELECT cena FROM miejsca WHERE nazwa = '$miejsce';";
                         $wynik2=mysqli_query($link,$zap2);
-
+                        $row=mysqli_fetch_array($wynik2);
+                        $cena=$row[0]*($ileDoroslych+($ileDzieci/2));
+                        
+                        echo "<p>$cena zł</p>";
                     }
                 }
             ?>
