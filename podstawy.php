@@ -155,5 +155,31 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
             PHP</li>
         <li>_FILE_ - stała zawierająca nazwe pliku ze skryptem, który jest aktualnie przetwarzany</li>
     </ol>
+    <h1>Operatorzy i wyrazenia</h1>
+    <h3>W PHP operatorzy możemy podzielić na: </h3>
+    <ol>
+        <li>Arytmetyczne
+            <ul>
+                <li>+</li>
+                <li>-</li>
+                <li>*</li>
+                <li>/</li>
+                <li>%</li>
+                <li>**</li>
+            </ul>
+        </li>
+        <li>porównania</li>
+        <ul>
+            <li>==</li>
+            <li>!=</li>
+            <li>===</li>
+            <li>!==</li>
+            <li>></li>
+            <li><</li>
+            <li>>=</li>
+            <li>&lt;=</li>
+            <li>Argumenty są różne <> </li>
+        </ul>
+    </ol>
 </body>
 </html>
