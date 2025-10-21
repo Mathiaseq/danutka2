@@ -21,6 +21,11 @@
                 <select>
                     <?php
                        $link=mysqli_connect("localhost","root","","wyprawy"); 
+                       $zap1="SELECT nazwa FROM miejsca ORDER BY nazwa ASC";
+                       $wynik1=mysqli_query($link,$zap1);
+                       while($lista=mysqli_fetch_array($wynik1)){
+                        echo "<option value='$lista[0]'>$lista[0]</option>";
+                       }
                     ?>
                 </select>
             </label>
