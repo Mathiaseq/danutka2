@@ -63,7 +63,7 @@
                     echo"<h2>$wiersz[0]</h2>";
                     echo"<p>$wiersz[2]</p></div>";
                 }
-                mysqli_close($link);
+            mysqli_close($link);
             ?>
         </section>
     </main>
