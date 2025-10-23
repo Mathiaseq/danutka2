@@ -13,7 +13,20 @@ function baza(aktualnyBlok){
         drugi.style.display="none";
         trzeci.style.display="none";
     }
-}
-function opisy(aktualnyBlok){
-    
+    if(aktualnyBlok==drugi){
+        blokBaza.style.backgroundColor="#FFAEA5";
+        blokOpisy.style.backgroundColor="MistyRose";
+        blokGaleria.style.backgroundColor="#FFAEA5";
+        pierwszy.style.dispaly="none";
+        drugi.style.display="block";
+        trzeci.style.display="none";
+    }
+    if(aktualnyBlok==trzeci){
+        blokBaza.style.backgroundColor="#FFAEA5";
+        blokOpisy.style.backgroundColor="#FFAEA5";
+        blokGaleria.style.backgroundColor="MistyRose";
+        pierwszy.style.dispaly="none";
+        drugi.style.display="none";
+        trzeci.style.display="block";
+    }
 }
