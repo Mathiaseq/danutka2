@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Smoki</title>
-    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" type="text/css" href="styl.css">
+    <script src="skrypt.js"></script>
+
 </head>
 
 <body>
