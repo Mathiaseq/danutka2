@@ -6,10 +6,12 @@ function baza(aktualnyBlok){
     const blokGaleria=document.getElementById("blokGaleria");
     const trzeci=document.getElementById("trzeci");
     if(aktualnyBlok == pierwszy){
-        blockBaza.style.backgroundColor="MistyRose";
+        blokBaza.style.backgroundColor="MistyRose";
         blokOpisy.style.backgroundColor="#FFAEA5";
-        blockGaleria.style.backgroundColor="#FFAEA5";
+        blokGaleria.style.backgroundColor="#FFAEA5";
         pierwszy.style.dispaly="block";
+        drugi.style.display="none";
+        trzeci.style.display="none";
     }
 }
 function opisy(aktualnyBlok){
