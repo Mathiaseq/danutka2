@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Remonty</title>
-    <link rel="stylesheet" type="text/css" href="styl.css">
+    <link rel="stylesheet" type="text/css" href="styl2.css">
 </head>
 <body>
     <header>

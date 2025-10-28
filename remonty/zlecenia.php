@@ -26,23 +26,18 @@
                 <input type="number" id="ilosc_pracownikow" name="ilosc_pracownikow">
                 <input type="submit" value="Szukaj firm">
             </form>
-            <!-- Efekt działania skryptu 1 -->
+            skrypt1
         </section>
         <section>
             <h2>Dla wykonawców</h2>
-            <form action="skrypt3.php" method="post">
-                <select name="rodzaj_uslugi" onchange="this.form.pole_opcji.style.display = 'none'; this.form.pole_opcji.value='';">
-                    <option value="malowanie">malowanie</option>
-                    <option value="gipsowanie">gipsowanie</option>
-                </select>
-                <input type="hidden" id="pole_opcji" name="pole_opcji">
-                <script>
-                    document.getElementById("pole_opcji").style.display = 'none';
-                </script>
-                <script src="skrypt2.js"></script>
-                <input type="submit" value="Szukaj klientów">
+            
+                    <form action="zlecenia.php" method="post">
+                    <input type="radio" value="checked" name="wybor">malowanie<br>
+                    <input type="radio" name="wybor">gipsowanie
+                    </form>
+       
                 <datalist id="lista_klientow">
-                    <!-- Lista wypełniana przez skrypt 3 -->
+                    skrypt3
                 </datalist>
             </form>
             </section>
