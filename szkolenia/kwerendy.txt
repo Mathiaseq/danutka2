@@ -1,0 +1,3 @@
+zap1 = SELECT `kod`, `nazwa`, `cena` FROM `kursy` ORDER BY cena ASC;
+zap2 = SELECT `nazwa` FROM `kursy`;
+zap3 = INSERT INTO `uczestnicy`(`imie`, `nazwisko`, `wiek`) VALUES ('Tadeusz','Wysocki',36);
