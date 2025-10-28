@@ -41,7 +41,7 @@
         <section id="srodkowa">
             <h2>Dla wykonawców</h2>
                 <form action="zlecenia.php" method="post">
-                   <select>
+                   <select name="miasto">
                         <?php
                             $zap3="SELECT DISTINCT miasto FROM klienci ORDER BY miasto ASC;";
                             $wynik3=mysqli_query($link,$zap3);
@@ -50,12 +50,23 @@
                             }
                         ?>
                    </select><br>
-                   <input type="radio" value="checked" name="wybor">Malowanie<br>
-                   <input type="radio" name="wybor">Gipsowanie<br>
+                   <input type="radio" checked name="wybor" value="malowanie">Malowanie<br>
+                   <input type="radio" name="wybor" value="gipsowanie">Gipsowanie<br>
                    <button name="submit">Szukaj klientów</button>
                 </form>
                 <ul>
-                    skrypt3
+                    <?php
+                        $miasto = $_POST['miasto']??NULL;
+                        $wybor = $_POST['wybor']??NULL;
+                        if(isset($miasto) and isset($wybor)){
+                            $zap4 = "SELECT k.imie, z.cena FROM klienci k, zlecenia z WHERE z.id_klienta=k.id_klienta AND k.miasto='$miasto' AND z.rodzaj='$wybor';";
+                            $wynik4 = mysqli_query($link,$zap4);
+                            while($element = mysqli_fetch_array($wynik4)){
+                                echo"<li>$element[0] - $element[1]</li>";
+                            }
+                        }
+                    mysqli_close($link);
+                    ?>
                 </ul>
             </section>
         </main>
