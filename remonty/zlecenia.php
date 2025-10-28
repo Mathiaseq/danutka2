@@ -43,7 +43,7 @@
                 <form action="zlecenia.php" method="post">
                    <select>
                         <?php
-                            $zap3="SELECT miasto FROM klienci ORDER BY miasto ASC;";
+                            $zap3="SELECT DISTINCT miasto FROM klienci ORDER BY miasto ASC;";
                             $wynik3=mysqli_query($link,$zap3);
                             while($opcja=mysqli_fetch_array($wynik3)){
                                 echo"<option value='$opcja[0]'>$opcja[0]</option>";
