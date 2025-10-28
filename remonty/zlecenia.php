@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Remonty</title>
-    <link rel="stylesheet" type="text/css" href="styl.css">
+    <link rel="stylesheet" type="text/css" href="styl2.css">
 </head>
 <body>
     <header>
@@ -15,11 +15,10 @@
             <a href="https://remonty.pl" target="_blank">Partnerzy</a>
         </nav>
         <aside>
-            <img src="tapeta_lewa.png" alt="usługi">
-            <img src="tapeta_prawa.png" alt="usługi">
-            <img src="tapeta_lewa.png" alt="usługi">
+            <img src="tapeta_prawa.png" alt="uslugi">
+            <img src="tapeta_lewa.png" alt="uslugi">
         </aside>
-        <section>
+        <section id="lewy">
             <h2>Dla klientów</h2>
             <form action="skrypt1.php" method="post">
                 <label for="ilosc_pracownikow">Ilu co najmniej pracowników potrzebujesz?</label>
@@ -28,23 +27,12 @@
             </form>
             skrypt1
         </section>
-        <section>
+        <section id="srodkowy">
             <h2>Dla wykonawców</h2>
-            
-                    <form action="zlecenia.php" method="post">
-                    <input type="radio" value="checked" name="wybor">malowanie<br>
-                    <input type="radio" name="wybor">gipsowanie
-                    </form>
-       
-                <datalist id="lista_klientow">
-                    skrypt3
-                </datalist>
+            <form action="zlecenia.php" method="post">
+                <input type="radio" value="checked" name="wybor">malowanie<br>
+                <input type="radio" name="wybor">gipsowanie
             </form>
-            </section>
-            <footer>
-            <p>Stronę wykonał: <strong>Twoja nazwa</strong></p>
-            </footer>
-        
     </main>
 </body>
 </html>
