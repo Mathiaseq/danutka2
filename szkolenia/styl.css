@@ -10,7 +10,6 @@ header, footer {
     color: white;
     padding: 10px;
     letter-spacing:20px;
-    text-align: center;
 }
 main{
     display:flex;
@@ -37,6 +36,6 @@ input, select, button {
     margin: 5px;
     width: 70%;
 }
-table td:hover {
+tr:hover {
     background-color: #F8BBD0;
 }
