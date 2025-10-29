@@ -21,14 +21,10 @@
         <section id="prawy">
             <h2>Zapisy na kursy</h2>
             <form method="POST" action="index.php">
-                <label for="imie">Imie:<br>
-                <input type="text" name="imie"></label><br>
-                <label for="nazwisko">Nazwisko:<br>
-                <input type="text" name="nazwisko"></label><br>
-                <label for="wiek">Wiek:<br>
-                <input type="number" name="wiek"></label><br>
-                <label for="kurs">Rodzaj kursu:<br>
-                <select name="rodzaj_kursu" name="rodzaj_kursu"></select>
+                <label>Imie:<br><input type="text" name="imie"></label><br>
+                <label>Nazwisko:<br><input type="text" name="nazwisko"></label><br>
+                <label>Wiek:<br><input type="number" name="wiek"></label><br>
+                <label>Rodzaj kursu:<br><select name="rodzaj_kursu" name="rodzaj_kursu"></select></label>
                 <?php
                     //skrypt2
                 ?>
