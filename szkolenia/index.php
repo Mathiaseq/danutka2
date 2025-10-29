@@ -10,7 +10,7 @@
         <h1>SZKOLENIA</h1>
     </header>
     <main>
-        <section id="left">
+        <section id="lewy">
             <table>
                 <tr><th>Kurs</th><th>Nazwa</th><th>Cena</th></tr>
                 <?php
@@ -18,7 +18,7 @@
                 ?>
             </table>
         </section>
-        <section id="right">
+        <section id="prawy">
             <h2>Zapisy na kursy</h2>
             <form method="POST" action="index.php">
                 <label for="imie">Imie:<br>
