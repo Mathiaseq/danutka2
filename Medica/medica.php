@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Przychodnia Medica</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="favicon.ico" type="obraz2.png">
+    <link rel="stylesheet" type="text/css" href="styl.css">
 </head>
 <body>
     
