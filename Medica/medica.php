@@ -31,7 +31,7 @@
             </section>
         </main>
         <footer>
-            <p><img src="obraz2.png" alt="Prychodnia">Stronę przygotował: </p>
+            <p><img src="obraz2.png" alt="Prychodnia">Stronę przygotował: 3174901279471</p>
         </footer>
 </body> 
 </html>
