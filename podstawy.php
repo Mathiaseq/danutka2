@@ -207,6 +207,9 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
             <tr><td>m</td><td>Miesiąc w postaci liczby dwucyfrowej z zerem na początku</td><td>od 01 do 12</td></tr>
             <tr><td>s</td><td>liczba sekund z zerem na początku</td><td>od 01 do 59</td></tr>
             <tr><td>Y</td><td>Rok w postaci czterech znaków</td><td>2023</td></tr>
+            <tr><td>w</td><td>Liczbowa forma dnia tyfodnia</td><td>0 (dla Niedzieli) aż do 6 (dla Soboty)</td></tr>
+            <tr><td>W</td><td>Numer thodnia w roku, zgodny z normą ISO-8601, Tygodnie ropoczynają Poniedziałki (dostępne od PHP 4.1.0)</td>
+        <td>Przykład: 42 (42. tydzień roku)</td></tr>
         </table>
         <br>
 </body>
