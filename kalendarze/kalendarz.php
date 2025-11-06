@@ -49,7 +49,15 @@
 				</button>
 			</form>
 			<?php
-				//skrypt2
+				if(isset($_POST["submit"])){
+					$data_form=$_POST["date"]??NULL;
+					$data_format=date("m-d",strtotime($data_form));
+					$zap2="SELECT imiona FROM imieniny WHERE data Like '$data_format';";
+					$wynik2=mysqli_query($link,$zap2);
+					while($wiersz2=mysqli_fetch_array($wynik2)){
+						echo "Dnia ".$data_format." imieniny obchodzą: ".$wiersz2[0];
+					}
+				}
 			?>
 		</section>
 		<section id="prawy">
