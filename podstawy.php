@@ -203,8 +203,8 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
             <tr><td>G</td><td>Godzina, w formacie 24-godzinowym, bez zer wiodących</td><td>od 1 do 24</td></tr>
             <tr><td>H</td><td>Godzina, w formacie 24-godzinowym, z zerami wiodącymi</td><td>od 01 do 24</td></tr>
             <tr><td>i</td><td>Minuty z zerami wiodącymi</td><td>od 01 do 59</td></tr>
-            <tr><td>l</td><td></td>Nazwa dnia tygodnia</td><td>Monday</td></tr>
-            <tr><td>m</td><td></td>Miesiąc w postaci liczby dwucyfrowej z zerem na początku</td><td>od 01 do 12</td></tr>
+            <tr><td>l</td><td>Nazwa dnia tygodnia</td><td>Monday</td></tr>
+            <tr><td>m</td><td>Miesiąc w postaci liczby dwucyfrowej z zerem na początku</td><td>od 01 do 12</td></tr>
             <tr><td>s</td><td>liczba sekund z zerem na początku</td><td>od 01 do 59</td></tr>
             <tr><td>Y</td><td>Rok w postaci czterech znaków</td><td>2023</td></tr>
         </table>
