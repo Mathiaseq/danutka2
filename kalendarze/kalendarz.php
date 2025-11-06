@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Kalendarz</title>
+	<link rel="stylesheet" type="text/css" href="styl.css">
+</head>
+<body>
+	<header>
+		<h1>Dni, miesiące, lata</h1>
+	</header>
+	<nav>
+		<p>
+		<?php
+			//skrypt1
+		?>
+	</nav>
+	<main>
+		<section id="lewy">
+			<table>
+				<tr><th>Liczba dni</th><th>miesiąc</th></tr>
+				<tr><td rowspan="7">31</td><td>Styczeń</td></tr>
+				<tr><td>Marzec</td></tr>
+				<tr><td>Maj</td></tr>
+				<tr><td>Lipiec</td></tr>
+				<tr><td>Sierpień</td></tr>
+				<tr><td>Październik</td></tr>
+				<tr><td>Grudzień</td></tr>
+				<tr><td rowspan="4">30</td><td>Kwiecień</td></tr>
+				<tr><td>Czerwiec</td></tr>
+				<tr><td>Wrzesień</td></tr>
+				<tr><td>Listopad</td></tr>
+				<tr><td>28 lub 29</td><td>Luty</td></tr>
+			</table>
+		</section>
+		<section id="srodek">
+			<h2>Sprawdź, kto ma imieniny</h2>
+			<form method="POST" action="kalendarz.php">
+				<input type="date" min="2024-01-01" max="2024-12-31" placeholder="dd.mm.'2024'" required name="date"><br>
+				<button type="submit" name="submit">wyślij
+				</button>
+			</form>
+			<?php
+				//skrypt2
+			?>
+		</section>
+		<section id="prawy">
+			<a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów" target="_blank"><img src="kalendarz.gif" alt="Kalendarz majów"></a>
+			<h2>Rodzaje kalendarzy</h2>
+			<ol>
+				<li>słoneczny
+				<ul>
+					<li>kalendarz Majów</li>
+					<li>juliański</li>
+					<li>gregoriański</li>
+				</ul></li>
+				<li>księżycowy
+				<ul>
+					<li>starogrecki</li>
+					<li>babiloński</li>
+				</ul></li>
+			</ol>
+		</section>
+	</main>
+	<footer>
+		<p>Strońe opracował(a): 2137</p>
+	</footer>
+</body>
+</html>

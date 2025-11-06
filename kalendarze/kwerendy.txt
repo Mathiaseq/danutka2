@@ -1,0 +1,2 @@
+zap. 2:
+SELECT imiona FROM imieniny WHERE data Like '05-04';
