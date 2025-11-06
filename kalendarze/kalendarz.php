@@ -14,14 +14,13 @@
 		<?php
 			$link=mysqli_connect("localhost","root","","kalendarz");
 			$dzien_a=date("mm-dd");
-			$dzien_t=date['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
+			$dzien_t=['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
 			$zap2="SELECT imiona FROM imieniny WHERE data Like '$dzien_a';";
 			$wynik2=mysqli_query($link,$zap1);
 			while($row=mysqli_fetch_array($wynik2)){
 				echo "Dzisiaj imieniny mają: ".$row['imiona']."<br>";
 			}
 			
-
 		?>
 		</p>
 	</nav>
