@@ -1,4 +1,0 @@
-zap1 SELECT `nazwa`, `cena` FROM `abonamenty`;
-
-zap3 SELECT nazwa, cecha FROM abonamenty a , szczegolyabonamentu s, 
-cechy c WHERE a.id=s.Abonamenty_id AND c.id=s.Cechy_id AND a.id=1;
