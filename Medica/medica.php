@@ -21,7 +21,7 @@
             </section>
             <section id="druga">
                 <h2>Premium</h2>
-                <ul>
+                <ul> 
                     skrypt2a
                 </ul>
             </section>

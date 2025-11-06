@@ -1,0 +1,5 @@
+zap.1:
+SELECT nazwa, cena, opis FROM abonamenty
+
+zap.3:
+SELECT a.nazwa, c.cecha FROM abonamenty a, szczegolyabonamentu s, cechy c WHERE a.id=s.abonamenty_id AND c.id=s.Cechy_id AND a.id=1
