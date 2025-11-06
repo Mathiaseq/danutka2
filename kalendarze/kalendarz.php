@@ -12,12 +12,12 @@
 	<nav>
 		<p>
 		<?php
-			$link=mysqli_connect("localhost","root","","kalendarz");
-			$dzien_a=date("mm-dd");
-			$dzien_t=['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
-			$zap2="SELECT imiona FROM imieniny WHERE data Like '$dzien_a';";
-			$wynik2=mysqli_query($link,$zap1);
-			while($row=mysqli_fetch_array($wynik2)){
+			$link = mysqli_connect("localhost","root","","kalendarz");
+			$dzien_a = date("m-d");
+			$dzien_t = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
+			$zap1 = "SELECT imiona FROM imieniny WHERE data Like '$dzien_a';";
+			$wynik1 = mysqli_query($link, $zap1);
+			while($row=mysqli_fetch_array($wynik1)){
 				echo "Dzisiaj jest ".$dzien_t[date('w')].", ".date('d.m.Y').", Imieniny: .$row[0]";
 			}
 		?>
