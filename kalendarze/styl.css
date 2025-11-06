@@ -25,3 +25,10 @@ nav{
 	width:35%;
 	float:right;
 }
+#srodek{
+	background-color: ghostwhite;
+	text-align: center;
+	height: 500px;
+	width:40%;
+	float:left;
+}
