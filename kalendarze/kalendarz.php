@@ -45,7 +45,8 @@
 			?>
 		</section>
 		<section id="prawy">
-			<a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów" target="_blank"><img src="kalendarz.gif" alt="Kalendarz majów"></a>
+			<a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów" target="_blank">
+				<img src="kalendarz.gif" alt="Kalendarz majów"></a>
 			<h2>Rodzaje kalendarzy</h2>
 			<ol>
 				<li>słoneczny
@@ -63,7 +64,7 @@
 		</section>
 	</main>
 	<footer>
-		<p>Strońe opracował(a): 2137</p>
+		<p>Stroee opracował(a): 139081274971</p>
 	</footer>
 </body>
 </html>
