@@ -18,7 +18,7 @@
 			$zap2="SELECT imiona FROM imieniny WHERE data Like '$dzien_a';";
 			$wynik2=mysqli_query($link,$zap1);
 			while($row=mysqli_fetch_array($wynik2)){
-				echo "Dzisiaj imieniny mają: ".$row['imiona']."<br>";
+				echo "Dzisiaj jest ".$dzien_t[date('w')].", ".date('d.m.Y').", Imieniny: $row[0]";
 			}
 			
 		?>
