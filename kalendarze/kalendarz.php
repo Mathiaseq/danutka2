@@ -20,7 +20,6 @@
 			while($row=mysqli_fetch_array($wynik2)){
 				echo "Dzisiaj jest ".$dzien_t[date('w')].", ".date('d.m.Y').", Imieniny: .$row[0]";
 			}
-			
 		?>
 		</p>
 	</nav>
