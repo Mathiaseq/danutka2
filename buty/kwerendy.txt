@@ -1,0 +1,2 @@
+zap1= SELECT `model` FROM `produkt`;
+zap2= SELECT b.model, b.nazwa, b.cena, p.nazwa_pliku FROM buty b, produkt p WHERE b.model = p.model;
