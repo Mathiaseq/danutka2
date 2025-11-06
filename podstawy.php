@@ -181,5 +181,33 @@ echo "<h3>Suma wynosi: $suma<br> różnica wynosi: $roznica<br> iloczyn wynosi: 
             <li>Argumenty są różne <> </li>
         </ul>
     </ol>
+    <h1>Funkcje daty i czasu w PHP</h1>
+    <p>Język PHP dysponuje dużą grupą funkcji, których zadaniem jest wykonywanie operacji na dacie i czasie</p>
+    <h2>Funkcja time()</h2>
+    <p>Zwraca informację na temat bieżącej daty i czasu. Nie ma żadnych argumentów. Informacje na temat daty i czasu są zwracane w postaci liczby.
+        Odpowiada ona liczbie sekund, które upłynęły od godziny 00:00:00 1 stycznia 1970 roku do chwili obecnej. Jest to tzw.
+        <i>znacznik_czasu(timestamp)</i></p>
+        <?php
+            echo time();
+        ?>
+        <br>
+        <h2>Funkcja getdate()</h2>
+        <h1>Funkcja date()</h1>
+        <h3>date() zwraca datę sformatowaną zgodnie z szablonem przedstawionym w poniższej tabeli.</h3>
+        <table border="2">
+            <tr><th>Znacznik</th><th>Znaczenie</th><th>Przykład</th></tr>
+            <tr><td>d</td><td>Dzień miesiąca w formacie z zerem na początku</td><td>01-31</td></tr>
+            <tr><td>D</td><td>Tekstowy opis angielskiej nazwy dnia, trzy litery</td><td>Mon, Tue</td></tr>
+            <tr><td>F</td><td>Pełen angielski opis, dnia miesiąca, taki jak January, czy March</td><td>January</td></tr>
+            <tr><td>g</td><td>Godzina, w formacei 12-godzinowym, bez zer wiodących</td><td>od 1 do 12</td></tr>
+            <tr><td>G</td><td>Godzina, w formacie 24-godzinowym, bez zer wiodących</td><td>od 1 do 24</td></tr>
+            <tr><td>H</td><td>Godzina, w formacie 24-godzinowym, z zerami wiodącymi</td><td>od 01 do 24</td></tr>
+            <tr><td>i</td><td>Minuty z zerami wiodącymi</td><td>od 01 do 59</td></tr>
+            <tr><td>l</td><td></td>Nazwa dnia tygodnia</td><td>Monday</td></tr>
+            <tr><td>m</td><td></td>Miesiąc w postaci liczby dwucyfrowej z zerem na początku</td><td>od 01 do 12</td></tr>
+            <tr><td>s</td><td>liczba sekund z zerem na początku</td><td>od 01 do 59</td></tr>
+            <tr><td>Y</td><td>Rok w postaci czterech znaków</td><td>2023</td></tr>
+        </table>
+        <br>
 </body>
 </html>
