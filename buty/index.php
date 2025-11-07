@@ -2,7 +2,7 @@
 <html lang="PL-pl">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title
+    <title>Document</title>
     <link rel="Stylesheet" href="style.css" type="text/css">
 </head>
 <body>
@@ -11,10 +11,19 @@
     </header>
     <main>
         <form action="zamow.php" method="POST">
-            <label>Model:<select>
-                <option>40</option>
+            <label>Model:<select name="model" class="kontrolki">
+                skrypt1
             </select></label>
+            <label>Rozmiar:<select>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+            </select></label>
+            <label>Liczba par:<input type="number" name="pary" class="kontrolki"></label>
+            <button type="submit" name="submit">Zamów</button>
         </form>
+        skrypt2
     </main>
     <footer>
         <p>Autor strony: 41897412978</p>
