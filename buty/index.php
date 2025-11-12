@@ -17,7 +17,7 @@
                 $zap1="SELECT model FROM produkt;";
                 $wynik1=mysqli_query($conn, $zap1);
                 while($opcja=mysqli_fetch_array($wynik1)){
-                    echo "<option>$opcja['0']</option>";
+                    echo "<option>$opcja[0]</option>";
                 }
                 ?>
             </select></label>
