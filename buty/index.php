@@ -2,50 +2,56 @@
 <html lang="PL-pl">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="Stylesheet" href="style.css" type="text/css">
+    <title>Obuwie</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <header>
         <h1>Obuwie męskie</h1>
     </header>
     <main>
-        <form action="zamow.php" method="POST">
-            <label>Model:<select name="model" class="kontrolki">
-                <?php 
-                $conn = mysqli_connect("localhost", "root", "", "obuwie");
-                $zap1="SELECT model FROM produkt;";
-                $wynik1=mysqli_query($conn, $zap1);
-                while($opcja=mysqli_fetch_array($wynik1)){
-                    echo "<option>$opcja[0]</option>";
+        <form action="zamow.php" method="post">
+            <label for="model">Model: </label>
+            <select name="model" id="model">
+                <?php
+                $conn = mysqli_connect('localhost', 'root', '', 'obuwie');
+                $sql = "SELECT model FROM produkt";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_array($result)) {
+                    echo '<option value="' . $row['model'] . '">' . $row['model'] . '</option>';
+                }
+                mysqli_close($conn);
+                ?>
+            </select>
+            <label for="rozmiar">Rozmiar: </label>
+            <select name="rozmiar" id="rozmiar">
+                <?php
+                for ($i = 40; $i <= 43; $i++) {
+                    echo "<option value=\"$i\">$i</option>";
                 }
                 ?>
-            </select></label>
-            <label>Rozmiar:<select>
-                <option value="40">40</option>
-                <option value="41">41</option>
-                <option value="42">42</option>
-                <option value="43">43</option>
-            </select></label>
-            <label>Liczba par:<input type="number" name="pary" class="kontrolki"></label>
-            <button type="submit" name="submit">Zamów</button>
+            </select>
+            <label for="liczba_par">Liczba par: </label>
+            <input type="number" name="liczba_par" id="liczba_par" min="1">
+            <button type="submit">Zamów</button>
         </form>
-        <?php 
-        $zap2="SELECT b.model, b.nazwa, b.cena, p.nazwa_pliku FROM buty b, produkt p WHERE b.model = p.model;";
-        $wynik2=mysqli_query($conn, $zap2);
-        while($blok=mysqli_fetch_array($wynik2)){
-            echo"<div class='buty'>";
-            echo "<img src='$blok[3]' alt='but męski'>";
-            echo "<h2>$blok[1]</h2>";
-            echo "<h5>Model: $blok[0]</h5>";
-            echo "<h4>Cena: $blok[2]</h4>";       
+        <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'obuwie');
+        $sql = "SELECT buty.model, buty.nazwa, buty.cena, produkt.nazwa_pliku FROM buty JOIN produkt ON buty.model = produkt.model";
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<div class="produkt">';
+            echo '<img src="' . htmlspecialchars($row['nazwa_pliku']) . '" alt="but męski">';
+            echo '<h2>' . htmlspecialchars($row['nazwa']) . '</h2>';
+            echo '<h5>Model: ' . htmlspecialchars($row['model']) . '</h5>';
+            echo '<h4>Cena: ' . htmlspecialchars($row['cena']) . '</h4>';
+            echo '</div>';
         }
         mysqli_close($conn);
-        
         ?>
     </main>
     <footer>
-        <p>Autor strony: 41897412978</p>
+        <p>Autor strony: 67834678343467834678</p>
     </footer>
 </body>
 </html>
