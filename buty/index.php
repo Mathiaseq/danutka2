@@ -12,7 +12,14 @@
     <main>
         <form action="zamow.php" method="POST">
             <label>Model:<select name="model" class="kontrolki">
-                skrypt1
+                <?php 
+                $conn = mysqli_connect("localhost", "root", "", "buty");
+                $zap1="SELECT model FROM produkt;";
+                $wynik1=mysqli_query($conn, $zap1);
+                while($opcja=mysqli_fetch_array($wynik1)){
+                    echo "<option>$opcja['0']</option>";
+                }
+                ?>
             </select></label>
             <label>Rozmiar:<select>
                 <option value="40">40</option>
