@@ -24,3 +24,10 @@ main{
     border:1px solid sienna;
     border-radius:30px;
 }
+.buty:hover{
+    background-color: linen;;
+}
+img{
+    float:left;
+    margin-right:30px;
+}
