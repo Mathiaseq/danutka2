@@ -18,10 +18,19 @@ $conn = mysqli_connect("localhost", "root", "", "firma");
                 <li><a href="szkolenia.php">Szkolenia</a></li>
             </ul>
         </nav>
-
         <main>
             <?php
-
+                $link=mysqli_connect("localhost","root","","firma");
+                $zap1="SELECT Data, Temat FROM szkolenia ORDER BY Data ASC";
+                $wynik1=mysqli_query($link,$zap1);
+                while($akapit=mysqli_fetch_array($wynik1)){
+                    $plik=fopen('harmonogram.txt','a');
+                    $zapa=$akapit[0]." ".$akapit[1]."\n";
+                    fputs($plik,$zapa);
+                    echo "<p>$akapit[0] $akapit[1]</p>";
+                    fclose($plik);
+ 
+                }
             ?>
         </main>
 
