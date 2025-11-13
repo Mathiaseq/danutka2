@@ -8,8 +8,26 @@ $conn = mysqli_connect("localhost", "root", "", "firma");
     <title>Document</title>
 </head>
 <body>
-    
-</body>
+        <header>
+            <img src="baner.jpg" alt="Szkolenia">
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="szkolenia.php">Szkolenia</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Zapraszamy do udziału<br>w szkoleniach<br>z branży IT</h1>
+        </main>
+
+        <footer>
+            <h2>Firma szkoleniowa, ul. Główna 1, 23-456 Warszawa</h2>
+            <p>Autor: 000000000000000000000000</p>
+        </footer>
+    </body>
 </html>
 
 
