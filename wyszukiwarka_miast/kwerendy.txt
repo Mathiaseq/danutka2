@@ -1,0 +1,1 @@
+zap3= SELECT m.nazwa, w.nazwa FROM miasta m, wojewodztwa w WHERE w.id=m.id_wojewodztwa AND m.nazwa LIKE "Lu%" ORDER BY m.nazwa ASC;
