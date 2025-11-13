@@ -1,0 +1,31 @@
+*{
+    font-family:Helvetica;
+}
+body{
+    background-color: lightsalmon;
+    text-align: center;
+}
+#lewy_dolny{
+    width:30%;
+    height:400px;
+    float:left;
+}
+#lewy_gorny{
+    background-color: darksalmon;
+    width:30%;
+    height:100px;
+    float:left;
+}
+#prawy{
+    background-color: DarkSalmon;
+    width:70%;
+    height:500px;
+    overflow:auto;
+    float:right;
+}
+img{
+    width:100%;
+}
+#filtr>p{
+    font-style:italic;
+}
