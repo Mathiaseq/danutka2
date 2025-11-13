@@ -20,7 +20,9 @@ $conn = mysqli_connect("localhost", "root", "", "firma");
         </nav>
 
         <main>
-            <h1>Zapraszamy do udziału<br>w szkoleniach<br>z branży IT</h1>
+            <?php
+                
+            ?>
         </main>
 
         <footer>
