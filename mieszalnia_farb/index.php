@@ -38,11 +38,16 @@
                         $zap3="SELECT k.nazwisko, k.imie, z.id, z.kod_koloru, z.pojemnosc, z.data_odbioru FROM klienci k, zamowienia z WHERE z.id_klienta = k.Id ORDER BY z.data_dbioru ASC;";
                         $wynik=mysqli_query($link, $zap3);
                     }
+                    else
+                    {
+
+                        
+                    
                     while(($wiersz=mysqli_fetch_array($wynik))!= NULL){
                         echo "<tr><td>$wiersz[2]</td><td>$wiersz[0]</td><td>$wiersz[1]</td><td style='background-color:#".$wiersz[3]."'>$wiersz[3]</td>
                         <td>$wiersz[4]</td><td>$wiersz[5]</td></tr>";
                     }
-
+                }
                     
 
                     mysqli_close($link);
