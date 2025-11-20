@@ -1,5 +1,5 @@
 <?php
-    $link = mysqli_query(hostname: "localhost",username: "root",password: "",database: "szachy");
+    $link = mysqli_connect("localhost","root","", "szachy");
 ?>
 
 <!DOCTYPE html>
