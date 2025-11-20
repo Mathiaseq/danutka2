@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <h2>Koło szachowe <i>gambit</i> piona</h2>
+            <h2>Koło szachowe gambit piona</h2>
         </header>
 
         <div id="lewy">
@@ -44,7 +44,7 @@
         </div>
 
         <footer>
-            <p>Stronę wykonał: 000000000000000</p>
+            <p>Stronę wykonał: 00317823131</p>
         </footer>
     </body>
 </html>
