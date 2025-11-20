@@ -29,7 +29,6 @@
                 <li>wyzwania</li>
             </ul>
         </div>
-
         <main>
             <h2>Dołącz do naszego zespołu!</h2>
             <p>Wpisz swoje dane do formularza:</p>
@@ -66,7 +65,7 @@
                 </thead>
                 <tbody>
                     <?php
-                        $conn = new mysqli(hostname: "localhost",username: "root",password: "",database: "zdobywcy");
+                        $conn = new mysqli( "localhost", "root", "", "zdobywcy");
 
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $nazwisko = $_POST['nazwisko'];
@@ -103,7 +102,7 @@
         </main>
 
         <footer>
-            <p>Stronę wykonał: <a href="https://ee-informatyk.pl" target="_blank" style="text-decoration: none;color: unset;">EE-Informatyk.pl</a></p>
+            <p>Stronę wykonał: <a href="https://ee-informatyk.pl" target="_blank" style="text-decoration: none;color: unset;">Mega SIGMA skibid ohio final boss</a></p>
         </footer>
     </body>
 </html>
