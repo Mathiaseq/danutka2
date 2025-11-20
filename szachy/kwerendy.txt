@@ -1,0 +1,2 @@
+zap 1 = SELECT pseudonim, tytul, ranking, klasa FROM zawodnicy WHERE ranking>2787 ORDER BY ranking DESC;
+zap 2 = SELECT pseudonim, klasa FROM zawodnicy ORDER BY RAND() LIMIT 2;
