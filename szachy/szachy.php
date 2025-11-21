@@ -53,6 +53,17 @@
             <form action="szachy.php" method="post">
                 <input type="submit" value="Losuj nową parę graczy" id="losuj" name="losuj">
             </form>
+             <?php
+                if (isset($_POST['losuj'])) {
+                    $zap2 = "SELECT pseudonim, klasa FROM zawodnicy ORDER BY RAND() LIMIT 2;";
+                    $wynik2 = mysqli_query($link, $zap2);
+                    echo "<h4>";
+                    while ($row = mysqli_fetch_array($wynik2)) {
+                        echo $row["pseudonim"]." ".$row['klasa']." ";
+                    }
+                    echo "</h4>";
+                }
+            ?>
             <p>Legenda: AM - Absolutny Mistrz, SM - Szkolny Mistrz, PM - Mistrz Poziomu, KM - Mistrz Klasowy</p>
         </div>
 
