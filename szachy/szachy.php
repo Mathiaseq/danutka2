@@ -1,7 +1,3 @@
-<?php
-    $link = mysqli_connect("localhost","root","", "szachy");
-?>
-
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -35,7 +31,24 @@
                     <th>Ranking</th>
                     <th>Klasa</th>
                 </tr>
-
+                  <?php
+                    $link = mysqli_connect('localhost', 'root', '', 'szachy');
+                    $zap1 = "SELECT pseudonim, tytul, ranking, klasa FROM zawodnicy WHERE ranking > 2787 ORDER BY ranking DESC;";
+                    $wynik1 = mysqli_query($link, $zap1);
+                    $i = 1;
+                    while ($row = mysqli_fetch_array($wynik1)) {
+                        echo "<tr>";
+                        echo "<td>" . $i . "</td>";
+                        echo "<td>" . $row["pseudonim"] . "</td>";
+                        echo "<td>" . $row["tytul"] . "</td>";
+                        echo "<td>" . $row["ranking"] . "</td>";
+                        echo "<td>" . $row["klasa"] . "</td>";
+                        echo "</tr>";
+                        $i++;
+                    }
+                    echo "<tr>";
+                    echo "</tr>";
+                ?>
             </table>
             <form action="szachy.php" method="post">
                 <input type="submit" value="Losuj nową parę graczy" id="losuj" name="losuj">
