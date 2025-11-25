@@ -27,12 +27,11 @@
                 </thead>
                 <tbody>
                     <?php
-                        // Skrypt #1
-                        $conn = mysqli_connect("localhost", "root", "", "konkurs");
-                        $sql = "SELECT nazwa, opis, cena FROM nagrody ORDER BY RAND() LIMIT 5;";
-                        $result = mysqli_query($conn, $sql);
+                        $link = mysqli_connect("localhost", "root", "", "konkurs");
+                        $zap1 = "SELECT nazwa, opis, cena FROM nagrody ORDER BY RAND() LIMIT 5;";
+                        $wynik1 = mysqli_query($link, $zap1);
                         $i = 1;
-                        while ($row = mysqli_fetch_assoc($result)) {
+                        while ($row = mysqli_fetch_assoc($wynik1)) {
                             echo "<tr>";
                             echo "<td>" . $i . "</td>";
                                 echo "<td>" . $row["nazwa"] . "</td>";
@@ -42,7 +41,7 @@
                             $i++;
                         }
 
-                        mysqli_close($conn);
+                        mysqli_close($link);
                     ?>
                 </tbody>
             </table>
