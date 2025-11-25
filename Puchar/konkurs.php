@@ -27,21 +27,21 @@
                 </thead>
                 <tbody>
                     <?php
-                        $link = mysqli_connect("localhost", "root", "", "konkurs");
-                        $zap1 = "SELECT nazwa, opis, cena FROM nagrody ORDER BY RAND() LIMIT 5;";
-                        $wynik1 = mysqli_query($link, $zap1);
-                        $i = 1;
-                        while ($row = mysqli_fetch_assoc($wynik1)) {
-                            echo "<tr>";
-                            echo "<td>" . $i . "</td>";
-                                echo "<td>" . $row["nazwa"] . "</td>";
-                                echo "<td>" . $row["opis"] . "</td>";
-                                echo "<td>" . $row["cena"] . "</td>";
-                            echo "</tr>";
-                            $i++;
-                        }
+                        // $link = mysqli_connect("localhost", "root", "", "konkurs");
+                        // $zap1 = "SELECT nazwa, opis, cena FROM nagrody ORDER BY RAND() LIMIT 5;";
+                        // $wynik1 = mysqli_query($link, $zap1);
+                        // $i = 1;
+                        // while ($row = mysqli_fetch_assoc($wynik1)) {
+                        //     echo "<tr>";
+                        //     echo "<td>" . $i . "</td>";
+                        //         echo "<td>" . $row["nazwa"] . "</td>";
+                        //         echo "<td>" . $row["opis"] . "</td>";
+                        //         echo "<td>" . $row["cena"] . "</td>";
+                        //     echo "</tr>";
+                        //     $i++;
+                        // }
 
-                        mysqli_close($link);
+                        // mysqli_close($link);
                     ?>
                 </tbody>
             </table>
