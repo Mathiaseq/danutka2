@@ -1,12 +1,10 @@
 <?php
-    $conn = mysqli_connect("localhost","root","","motory");
+    $link = mysqli_connect("localhost","root","","motory");
 ?>
-
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="PL-pl">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Motocykle</title>
         <link rel="stylesheet" href="styl.css">
     </head>
@@ -20,9 +18,8 @@
         <main>
             <h2>Gdzie pojechać?</h2>
             <?php
-                // Skrypt #1
                 $sql = "SELECT nazwa, opis, poczatek, zrodlo FROM wycieczki JOIN zdjecia ON zdjecia_id = zdjecia.id;";
-                $result = mysqli_query($conn, $sql);
+                $result = mysqli_query($link, $sql);
                 while($row = mysqli_fetch_array($result)) {
                     echo "<div class='terminy'>";
                         echo "$row[0], rozpoczyna się w $row[2], <a href='$row[3].jpg'>zobacz zdjęcie</a>";
@@ -48,7 +45,6 @@
         <div id="prawy2">
             <h2>Statystyki</h2>
             <?php
-                // Skrypt #2
                 $sql = "SELECT COUNT(*) FROM wycieczki;";
                 $result = mysqli_query($conn, $sql);
                 while($row = mysqli_fetch_array($result)) {
@@ -68,5 +64,5 @@
 </html>
 
 <?php
-    mysqli_close($conn);
+    mysqli_close($link);
 ?>
