@@ -1,5 +1,5 @@
 <?php
-    $link = mysqli_connect("localhost","root","","motory");
+    $link = mysqli_connect("localhost","root","","motor");
 ?>
 <!DOCTYPE html>
 <html lang="PL-pl">
@@ -46,7 +46,7 @@
             <h2>Statystyki</h2>
             <?php
                 $sql = "SELECT COUNT(*) FROM wycieczki;";
-                $result = mysqli_query($conn, $sql);
+                $result = mysqli_query($link, $sql);
                 while($row = mysqli_fetch_array($result)) {
                     $liczba = $row[0];
                 }
