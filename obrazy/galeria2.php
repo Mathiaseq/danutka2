@@ -19,7 +19,7 @@
             <li>Samochody</li>
         </ol>
     </section>
-    <section id="srodkowy">
+    <main>
         <?php
         $conn = mysqli_connect("localhost", "root", "", "galeria");
         $sql = "SELECT plik, tytul, polubienia, imie, nazwisko FROM zdjecia JOIN autorzy ON autorzy_id = autorzy.id ORDER BY nazwisko;";
@@ -41,7 +41,7 @@
                     echo "</div>";
                 }
             ?>
-    </section>
+    </main>
     <section id="prawy">
         <h2>Najbardziej lubiane</h2>
             <?php

@@ -31,7 +31,7 @@ img {
     width: 100%;
 }
 
-main > div {
+main > section {
     float: left;
     width: 46%;
     margin: 2%;
@@ -58,15 +58,15 @@ a {
     padding: 15px;
 }
   
-main div img {
+main section img {
     transition: opacity 0.5s ease;
     opacity: 1;
 }
   
-main div:hover img {
+main section:hover img {
     opacity: 0.3;
 }
   
-main div:hover h3, main div:hover p, main div:hover a {
+main section:hover h3, main section:hover p, main section:hover a {
     opacity: 1;
 }
