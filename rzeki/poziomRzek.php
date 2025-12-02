@@ -1,7 +1,3 @@
-<?php
-    $conn = mysqli_connect("localhost","root","","rzeki");
-?>
-
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -45,7 +41,7 @@
                 </tr>
 
                 <?php
-                    // Skrypt #1
+                 $conn = mysqli_connect("localhost","root","","rzeki");
 
                     if(isset($_POST['stan'])) {
                         $stan = $_POST['stan'];
@@ -84,12 +80,12 @@
             <h3>Średnie stany wód</h3>
             
             <?php
-                // Skrypt #2
                 $sql = "SELECT dataPomiaru, AVG(stanWody) FROM pomiary GROUP BY dataPomiaru; ";
                 $result = mysqli_query($conn, $sql);
                 while($row = mysqli_fetch_array($result)) {
                     echo "<p>$row[0]: $row[1]</p>";
                 }
+                    mysqli_close($conn);
             ?>
 
             <a href="https://komunikaty.pl">Dowiedz się więcej</a>
@@ -103,6 +99,3 @@
     </body>
 </html>
 
-<?php
-    mysqli_close($conn);
-?>

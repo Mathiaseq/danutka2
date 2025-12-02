@@ -2,8 +2,7 @@
     font-family: 'Georgia';
 }
 
-#header1,
-#header2 {
+#header1,#header2 {
     float: left;
     background-color: Navy;
     color: white;
@@ -28,8 +27,7 @@ label:hover {
     text-decoration: underline;
 }
 
-#lewy,
-#prawy {
+#lewy, #prawy {
     background-color: Azure;
     height: 550px;
     float: left;
