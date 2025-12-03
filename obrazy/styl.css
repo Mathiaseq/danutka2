@@ -2,14 +2,16 @@
     font-family: 'Helvetica';
 }
 
-header, footer {
+header,
+footer {
     background-color: Sienna;
     color: white;
     padding: 10px;
     text-align: center;
 }
 
-#lewy, #prawy {
+#lewy,
+#prawy {
     background-color: NavajoWhite;
     width: 15%;
     height: 700px;
@@ -31,7 +33,7 @@ img {
     width: 100%;
 }
 
-main > section {
+main > div {
     float: left;
     width: 46%;
     margin: 2%;
@@ -58,15 +60,17 @@ a {
     padding: 15px;
 }
   
-main section img {
+main div img {
     transition: opacity 0.5s ease;
     opacity: 1;
 }
   
-main section:hover img {
+main div:hover img {
     opacity: 0.3;
 }
   
-main section:hover h3, main section:hover p, main section:hover a {
+main div:hover h3,
+main div:hover p,
+main div:hover a {
     opacity: 1;
 }
