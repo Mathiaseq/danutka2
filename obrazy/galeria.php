@@ -8,7 +8,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Galeria</title>
-        <link rel="stylesheet" href=".css">
+        <link rel="stylesheet" href="styl.css">
     </head>
     <body>
         <header>
@@ -29,7 +29,7 @@
         <main>
             <?php
                 $sql = "SELECT plik, tytul, polubienia, imie, nazwisko FROM zdjecia JOIN autorzy ON autorzy_id = autorzy.id ORDER BY nazwisko;";
-                $result = $conn->query($sql);
+                $result = mysqli_query($conn, $sql);
                 while($row = $result -> fetch_array()) {
                     echo "<div>";
                         echo "<img src='$row[0]' alt='zdjęcie'>";
@@ -53,7 +53,7 @@
             <h2>Najbardziej lubiane</h2>
             <?php
                 $sql = "SELECT tytul, plik FROM zdjecia WHERE polubienia >= 100;";
-                $result = $conn->query($sql);
+                $result = mysqli_query($conn, $sql);
                 while($row = $result -> fetch_array()) {
                     echo "<img src='$row[1]' alt='$row[0]'>";
                 }
