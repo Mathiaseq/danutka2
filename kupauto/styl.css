@@ -1,0 +1,23 @@
+*{
+    font-family: Roboto, serif;
+}
+header{
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    word-spacing: 30px;
+    padding: 10px;
+}
+#pierwszy{
+    background-color: mistyrose;
+    height: 300px;
+    padding: 10px;
+    margin: 10px 50px 10px 50px;
+    border: 1px solid crimson;
+}
+#pierwszy>img{
+    text-align: right; 
+    float: left;
+    height:100%;
+}
