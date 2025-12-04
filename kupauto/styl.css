@@ -17,7 +17,6 @@ header{
     border: 1px solid crimson;
 }
 #pierwszy>img{
-    text-align: right; 
     float: left;
     height:100%;
 }
