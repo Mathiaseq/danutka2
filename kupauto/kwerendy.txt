@@ -1,0 +1,7 @@
+zap1 SELECT nazwa FROM marki;
+
+zap2 SELECT model, rodznik, przebieg, paliwo, cena, zdjecie FROM samochody WHERE od=10;
+
+zap3 SELECT m.nazwa, s.model, s.rocznik, s.cena, s.zdjecie FROM marki m, samochody s WHERE s.marki_id = m.id AND s.wyrozniony=1 LIMIT 4;
+
+zap4 SELECT s.model, s.cena, s.zdjecie FROM marki m, samochody s WHERE s.marki_id = m.id AND m.nazwa = "AUDI";
