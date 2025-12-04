@@ -1,12 +1,7 @@
-<?php
-    $conn = new mysqli(hostname: "localhost",username: "root",password: "",database: "wazenietirow");
-?>
-
 <!DOCTYPE html>
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ważenie samochodów ciężarowych</title>
         <link rel="stylesheet" href="styl.css">
     </head>
@@ -23,7 +18,7 @@
             <h2>Lokalizacje wag</h2>
             <ol>
                 <?php
-                    // Skrypt #1
+                $conn = mysqli_connect( "localhost", "root", "", "wazenietirow");
                     $sql = "SELECT ulica FROM lokalizacje;";
                     $result = $conn->query(query: $sql);
                     while($row = $result -> fetch_array()) {
@@ -46,7 +41,6 @@
                     <th>czas</th>
                 </tr>
                 <?php
-                    // Skrypt #2
                     $sql = "SELECT rejestracja, ulica, waga, dzien, czas FROM wagi JOIN lokalizacje ON wagi.lokalizacje_id = lokalizacje.id WHERE waga > 5;";
                     $result = $conn->query(query: $sql);
                     while($row = $result -> fetch_array()) {
@@ -62,10 +56,11 @@
             </table>
 
             <?php
-                // #Skrypt #3
                 $sql = "INSERT INTO wagi (lokalizacje_id, waga, rejestracja, dzien, czas) VALUES ('5', FLOOR(1+RAND()*10), 'DW12345', CURRENT_DATE, CURRENT_TIME)";
                 $result = $conn->query(query: $sql);
                 header(header: "refresh: 10");
+
+                mysqli_close($conn);
             ?>
 
         </div>
@@ -75,11 +70,7 @@
         </div>
 
         <footer>
-            <p>Stronę wykonał: <a href="https://ee-informatyk.pl/" target="_blank" style="text-decoration: none;color: unset;">EE-Informatyk.pl</a></p>
+            <p>Stronę wykonał: 37901389271380</p>
         </footer>
     </body>
 </html>
-
-<?php
-    $conn -> close();
-?>
