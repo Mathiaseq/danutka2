@@ -20,3 +20,29 @@ header{
     float: left;
     height:100%;
 }
+.oferta1, .oferta2 {
+    background-color: snow;
+    height: 450px;
+    width:1%;
+    text-align: center;
+    border: 1px solid crimson;
+    float:left;
+}
+#trzeci{
+    clear: both;
+}
+footer{
+    background-color: crimson;
+    color: white;
+}
+img{
+    width:100%;
+}
+h4{
+    font-size:180%;
+    text-align: center;
+    color: crimson;
+}
+a{
+    color: white;
+}
