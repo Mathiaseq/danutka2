@@ -58,7 +58,7 @@
             <?php
                 $sql = "INSERT INTO wagi (lokalizacje_id, waga, rejestracja, dzien, czas) VALUES ('5', FLOOR(1+RAND()*10), 'DW12345', CURRENT_DATE, CURRENT_TIME)";
                 $result = $conn->query(query: $sql);
-                header(header: "refresh: 10");
+                header( "refresh: 10");
 
                 mysqli_close($conn);
             ?>
