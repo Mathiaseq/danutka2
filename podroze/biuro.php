@@ -1,5 +1,5 @@
 <?php
-    $conn = new mysqli(hostname: "localhost",username: "root",password: "",database: "podroze");
+    $link = mysqli_connect( "localhost", "root", "", "podroze");
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +36,8 @@
         <div id="srodkowy">
             <h2>W tym roku jedziemy do...</h2>
             <?php
-                // Skrypt #1
                 $sql = "SELECT nazwaPliku, podpis FROM zdjecia ORDER BY podpis;";
-                $result = $conn->query(query: $sql);
+                $result = mysqli_query($link, $sql);
                 while($row = $result -> fetch_array()) {
                     echo "<img src='$row[0]' alt='$row[1]' title='$row[1]'>";
                 }
@@ -55,9 +54,8 @@
             <h3>W poprzednich latach byliśmy...</h3>
             <ol>
                 <?php
-                    // Skrypt #2
                     $sql = "SELECT cel, dataWyjazdu FROM wycieczki WHERE dostepna = FALSE;";
-                    $result = $conn->query(query: $sql);
+                    $result = mysqli_query($link, $sql);
                     while($row = $result -> fetch_array()) {
                         echo "<li>Dnia $row[1] pojechaliśmy do $row[0]</li>";
                     }
@@ -66,11 +64,11 @@
         </main>
 
         <footer>
-            <p>Stronę wykonał: <a href="https://ee-informatyk.pl/" target="_blank" style="text-decoration: none;color: unset;">EE-Informatyk.pl</a></p>
+            <p>Stronę wykonał: 7389173819</p>
         </footer>
     </body>
 </html>
 
 <?php
-    $conn -> close();
+    mysqli_close($link);
 ?>
