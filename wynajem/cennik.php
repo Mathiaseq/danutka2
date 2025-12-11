@@ -26,7 +26,7 @@
                     $sql = "SELECT * FROM pokoje";
                     $result = mysqli_query($conn,$sql);
     
-                    while($row = $result -> fetch_array()) {
+                    while($wiersz=mysqli_fetch_array($result)){
                         echo "<tr>";
                             echo "<td>".$row[0]."</td>";
                             echo "<td>".$row[1]."</td>";
