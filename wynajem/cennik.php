@@ -21,10 +21,10 @@
             <table>
                 <?php
                     // Skrypt
-                    $conn = new mysqli("localhost","root","","wynajem");
+                    $conn = mysqli_connect("localhost","root","","wynajem");
 
                     $sql = "SELECT * FROM pokoje";
-                    $result = $conn->query($sql);
+                    $result = mysqli_query($conn,$sql);
     
                     while($row = $result -> fetch_array()) {
                         echo "<tr>";
@@ -34,7 +34,7 @@
                         echo "</tr>";
                     }
 
-                    $conn -> close();
+                    mysqli_close($conn);
                 ?>
             </table>
         </div>
