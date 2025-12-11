@@ -27,7 +27,7 @@
         </div>
 
         <footer>
-            <p>Stronę opracował: <a href="https://ee-informatyk.pl/" target="_blank" style="color: #fff;text-decoration: none;font-size: 100%;padding: 0;">EE-Informatyk.pl</a></p>
+            <p>Stronę opracował: 12893763312</p>
         </footer>
     </body>
 </html>
