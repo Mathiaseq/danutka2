@@ -1,7 +1,6 @@
 <?php
-    $conn = new mysqli("localhost","root","","forumpsy");
+    $conn = mysqli_connect("localhost","root","","forumpsy");
 
-    // Skrypt #2
     if(!empty($_POST["odpowiedz"])) {
         $odpowiedz = $_POST["odpowiedz"];
 
@@ -27,7 +26,6 @@
         <div id="lewy">
             <img src="avatar.png" alt="Użytkownik forum">
             <?php
-                // Skrypt #1
                 $sql = "SELECT konta.nick, konta.postow, pytania.pytanie FROM konta, pytania WHERE konta.id = pytania.konta_id AND pytania.id = 1;";
                 $result = $conn->query($sql);
 
@@ -50,7 +48,6 @@
             <h2>Odpowiedzi na pytanie</h2>
             <ol>
                 <?php
-                    // Skrypt #3
                     $sql = "SELECT odpowiedzi.odpowiedz, konta.nick FROM odpowiedzi, konta WHERE odpowiedzi.konta_id = konta.id AND odpowiedzi.Pytania_id = 1;";
                     $result = $conn->query($sql);
 
@@ -69,5 +66,5 @@
 </html>
 
 <?php
-    $conn -> close();
+    mysqli_close($conn);
 ?>
