@@ -60,7 +60,7 @@
         </div>
 
         <footer>
-            Autor: <a href="https://ee-informatyk.pl/" target="_blank" style="color: unset;text-decoration: none;">EE-Informatyk.pl</a> <a href="http://mojestrony.pl/" target="_blank">Zobacz nasze realizacje</a>
+            Autor: 831903891 <a href="http://mojestrony.pl/" target="_blank">Zobacz nasze realizacje</a>
         </footer>
     </body>
 </html>
