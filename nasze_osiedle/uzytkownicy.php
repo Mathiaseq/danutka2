@@ -18,7 +18,6 @@
 
         <div id="baner2">
             <?php
-                // Skrypt #1
                 $sql = "SELECT COUNT(*) FROM dane;";
                 $result = $conn->query($sql);
 
@@ -42,7 +41,6 @@
         <div id="prawy">
             <h3>Wizytówka</h3>
             <?php
-                // Skrypt #2
                 if(isset($_POST["login"]) && isset($_POST["haslo"])) {
                     echo "<div class='wizytowka'>";
                     if(!empty($_POST["login"]) && !empty($_POST["haslo"])) {
@@ -89,7 +87,7 @@
         </div>
 
         <footer>
-            Stronę wykonał: <a href="https://ee-informatyk.pl/" target="_blank" style="color: unset;text-decoration: none;">EE-Informatyk.pl</a>
+            Stronę wykonał: 3917903278413 </a>
         </footer>
     </body>
 </html>
