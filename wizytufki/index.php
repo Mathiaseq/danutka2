@@ -1,5 +1,5 @@
 <?php
-    $conn = new mysqli("localhost","root","","firma1");
+    $conn = mysqli_connect("localhost","root","","firma1");
 ?>
 
 <!DOCTYPE html>
@@ -66,5 +66,5 @@
 </html>
 
 <?php
-    $conn -> close();
+    mysqli_close($conn);
 ?>
