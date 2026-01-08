@@ -1,5 +1,5 @@
 <?php
-    $conn = new mysqli("localhost","root","","firma");
+    $conn = new mysqli("localhost","root","","firma1");
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,6 @@
 
         <main>
             <?php
-                // Skrypt #1
                 if(isset($_POST["wyswietl"]) && isset($_POST["wizytowka"])) {
                     $wizytowka = $_POST["wizytowka"];
 
