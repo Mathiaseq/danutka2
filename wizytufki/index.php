@@ -53,7 +53,6 @@
             <p>Osoby proszone o podpisanie dokumentu RODO:</p>
             <ol>
             <?php
-                // Skrypt #2
                 $sql = "SELECT imie, nazwisko FROM pracownicy WHERE czyRODO = 0;";
                 $result = $conn->query($sql);
 
