@@ -45,7 +45,7 @@
         </div>
 
         <div id="footer2">
-            <p>Autorem wizytownika jest: <a href="https://ee-informatyk.pl/" target="_blank" style="text-decoration: none;font-weight: bold;color: #fff;">EE-Informatyk.pl</a></p>
+            <p>Autorem wizytówek jest pusia z netherytu</p>
             <a href="http://agencjareklamowa543.pl/" target="_blank">Zobacz nasze realizacje</a>
         </div>
 
