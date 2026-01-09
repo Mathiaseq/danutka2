@@ -1,0 +1,12 @@
+*{
+    font-family: Tahoma, sans-serif;
+}
+header{
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+}
+main{
+    background-color: seashell;
+    height:500px;
+}
