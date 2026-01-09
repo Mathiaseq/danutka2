@@ -23,7 +23,7 @@
 
         <footer id="stopka1">
             <h3>Współpracują z nami</h3>
-            <a href="http://skle.pl/">Sklep 1</a>
+            <a href="http://sklep.pl/">Sklep 1</a>
         </footer>
 
         <footer id="stopka2">
