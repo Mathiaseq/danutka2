@@ -3,7 +3,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="PL-pl">
     <head>
         <meta charset="UTF-8">
         <title>Opinie klientów</title>
@@ -21,28 +21,28 @@
             ?>
         </main>
 
-        <div id="stopka1">
+        <footer id="stopka1">
             <h3>Współpracują z nami</h3>
             <a href="http://skle.pl/">Sklep 1</a>
-        </div>
+        </footer>
 
-        <div id="stopka2">
+        <footer id="stopka2">
             <h3>Nasi top klienci</h3>
             <ol>
                 <?php
                    
                 ?>
             </ol>
-        </div>
+        </footer>
 
-        <div id="stopka3">
+        <footer id="stopka3">
             <h3>Skontaktuj się</h3>
             <p>telefon: 111222333</p>
-        </div>
+        </footer>
 
-        <div id="stopka4">
+        <footer id="stopka4">
             <h3>Autor: <a href="https://ee-informatyk.pl/" target="_blank" style="color: unset;text-decoration: none;">EE-Informatyk.pl</a></h3>
-        </div>
+        </footer>
     </body>
 </html>
 
