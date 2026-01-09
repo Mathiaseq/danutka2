@@ -41,7 +41,7 @@
         </footer>
 
         <footer id="stopka4">
-            <h3>Autor: <a href="https://ee-informatyk.pl/" target="_blank" style="color: unset;text-decoration: none;">EE-Informatyk.pl</a></h3>
+            <p>Autor: 1738917893</p>
         </footer>
     </body>
 </html>
