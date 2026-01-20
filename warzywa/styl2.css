@@ -1,0 +1,20 @@
+body{
+    font-family: Garamond;
+}
+#lewy{
+    background-color: #00600F;
+    color: white;
+    text-align: center;
+    width:75%;
+    height: 90px;
+}
+#prawy{
+    background-color: #00600F;
+    color: white;
+    text-align: center;
+    width: 25%;
+    height: 90px;
+}
+main{
+    
+}
