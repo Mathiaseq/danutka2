@@ -1,63 +1,52 @@
-<?php
-    $conn = mysqli_connect("localhost","root","","dane2");
-    
-    if(!empty($_POST["nazwa"]) && !empty($_POST["cena"])) {
-        $nazwa = $_POST["nazwa"];
-        $cena = $_POST["cena"];
-
-        $sql = "INSERT INTO produkty VALUES (NULL, 1, 4, '$nazwa', 10, '', $cena, 'owoce.jpg');";
-        $result = $conn->query($sql);
-    }
-?>
-
 <!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Warzywniak</title>
-        <link rel="stylesheet" href="styl2.css">
-    </head>
-    <body>
-        <div id="baner1">
-            <h1>Internetowy sklep z eko-warzywami</h1>
-        </div>
-
-        <div id="baner2">
-            <ol>
-                <li>warzywa</li>
-                <li>owoce</li>
-                <li><a href="https://terapiasokami.pl/" target="_blank">soki</a></li>
-            </ol>
-        </div>
-
-        <main>
+<html lang="PL=pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Warzywniak</title>
+    <link rel="stylesheet" type="text/css" href="styl2.css">
+</head>
+<body>
+    <header id="lewy">
+        <h1>Internetowy sklep z eko-warzywami</h1>
+    </header>
+    <header id="prawy">
+        <ol>
+            <li>warzywa</li>
+            <li>owoce</li>
+            <li><a href="https://terapiasokami.pl/" target="_blank">Soki</a></li>
+        </ol>
+    </header>
+    <main>
+        <?php
+        $link=mysqli_connect("localhost","root","","dane2");
+        $zap1 = "SELECT nazwa, ilosc, opis, cena, zdjecie FROM produkty WHERE Rodzaje_id IN (1, 2);";       
+        $odp1 = mysqli_query($link, $zap1);
+        while($blok = mysqli_fetch_array($odp1)){
+            echo "<div class='produkt'>";
+            echo "<img src='$blok[1]' alt='warzywniak'>";
+            echo "<h5>$blok[0]</h5>";
+            echo "<p>opis: $blok[2]</p>";
+            echo "<p>na stanie: $blok[1]</p>";
+            echo "<h2>$blok[3] zł</h2></div>";
+        }
+        ?>
+    </main>
+    <footer>
+        <form action="sklep.php" method="post">
+           Nazwa: <input type="text" name="nazwa">
+           Cena: <input type="text" name="cena">
+           <button type="submit">Dodaj Produkt</button>
+        </form>
             <?php
-                $sql = "SELECT nazwa, ilosc, opis, cena, zdjecie FROM produkty WHERE Rodzaje_id IN (1, 2);";
-                $result = $conn->query($sql);
-                    
-                while($row = $result -> fetch_array()) {
-                    echo "<div class='produkt'>";
-                        echo "<img src='$row[4]' alt='warzywniak'>";
-                        echo "<h5>$row[0]</h5>";
-                        echo "<p>opis: $row[2]</p>";
-                        echo "<p>na stanie: $row[1]</p>";
-                        echo "<h2>$row[3] zł</h2>";
-                    echo "</div>";
+                if ($_POST['nazwa'] != NULL and $_POST['cena'] != NULL) {
+                    $nazwa = $_POST['nazwa']??NULL;
+                    $cena = $_POST['cena']??NULL;
+                    $zap4 = 
                 }
-            ?>
-        </main>
 
-        <footer>
-            <form action="sklep.php" method="post">
-                <label for="nazwa">Nazwa: </label> <input type="text" name="nazwa" id="nazwa"> <label for="cena">Cena:</label> <input type="text" name="cena" id="cena"> <button type="submit">Dodaj produkt</button>
-            </form>
-            Stronę wykonał: <a href="https://ee-informatyk.pl/" target="_blank" style="color: unset;text-decoration: none;">EE-Informatyk.pl</a>
+
+                mysqli_close($link);
+            ?> 
         </footer>
-    </body>
+</body>
 </html>
-
-<?php
-    mysqli_close($conn);
-?>
