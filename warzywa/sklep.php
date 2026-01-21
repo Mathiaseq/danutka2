@@ -41,8 +41,10 @@
                 if ($_POST['nazwa'] != NULL and $_POST['cena'] != NULL) {
                     $nazwa = $_POST['nazwa']??NULL;
                     $cena = $_POST['cena']??NULL;
-                    $zap4 = 
+                    $zap4 = "Zapytanie 1: 'SELECT nazwa, ilosc, opis, cena, zdjecie FROM produkty WHERE Rodzaje_id IN (1, 2)';";
+                    mysqli_query($link, $zap4);
                 }
+    
 
 
                 mysqli_close($link);
