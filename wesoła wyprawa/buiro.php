@@ -13,7 +13,9 @@
         <?php
             setcookie('ciastko', '1', time()+3600);
             if(isset($_COOKIE['ciastko'])){
-                
+                echo "<p>Witaj ponownie na naszej stronie</p>";
+            }else{
+                echo "<p>Witaj! nasza strona używa ciasteczek</p>";
             }
         ?>
     </section>
