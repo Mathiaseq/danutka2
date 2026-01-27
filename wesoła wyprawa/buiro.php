@@ -10,7 +10,12 @@
         <h1>WESOŁA WYPRAWA</h1>
     </header>
     <section id ="ciasteczka">
-        skrypt1
+        <?php
+            setcookie('ciastko', '1', time()+3600);
+            if(isset($_COOKIE['ciastko'])){
+                
+            }
+        ?>
     </section>
     <aside id="lewy">
         <table>
