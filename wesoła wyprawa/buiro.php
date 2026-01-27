@@ -23,18 +23,22 @@
         <ul>
             <li>autokarowe
             <ol>
-            <li>po Polsce z przewodnikiem</li>
-            <li>do Niemiec i Czech</li>
+                <li>po Polsce z przewodnikiem</li>
+                <li>do Niemiec i Czech</li>
             </ol></li>
-            <li>samolotem<ol>
-                <li>Wczasy w Grecji</li>
-                <li>Zwiedzanie Barcelony</li>
-                <li>zwiedzanie Wenecji</li>
+            <li>samolotem
+                <ol>
+                    <li>Wczasy w Grecji</li>
+                    <li>Zwiedzanie Barcelony</li>
+                    <li>zwiedzanie Wenecji</li>
             </ol></li>
         </ul>
+        <h3>Pobierz dokumenty</h3>
+        <p><a href="regulamin.txt">Regulamin korzystania z usług biura podróży</a></p>
+        <p><a href="http://galeria.pl/" target="_blank">Tu znajdziesz zdjęcia z naszych wycieczek</a></p>
     </aside>
     <footer>
-
+        Stronę przygotował: 319073891789
     </footer>
 
 </body>
