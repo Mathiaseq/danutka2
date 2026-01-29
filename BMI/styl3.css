@@ -16,10 +16,12 @@
     width: 60%;
     height:400px;
     text-align: right;
+    float: left;
 }
 footer{
     background-color: #FF7F50;
     padding:20px;
+    clear:both;
 }
 body{
     font-family: Georgia;
