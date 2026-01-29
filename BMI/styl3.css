@@ -1,0 +1,40 @@
+#logo{
+    background-color: #FF7F50;
+    width: 25%;
+    height: 100px;
+        float:left;
+}
+#baner{
+    background-color: #FF7F50;
+    padding: 70px;
+}
+#lewy{
+    width:40%;
+    height:400px;
+}
+#prawy{
+    width: 60%;
+    height:400px;
+    text-align: right;
+}
+footer{
+    background-color: #FF7F50;
+    padding:20px;
+}
+body{
+    font-family: Georgia;
+    background-color: #FFFAFA;
+}
+form{
+    padding:80px;
+}
+table{
+    color: white;
+    text-align: center;
+    width:80%;
+    border: 1px dotted white;
+}
+th:hover{
+    background-color: #D3D3D3;
+    color: black;
+}
