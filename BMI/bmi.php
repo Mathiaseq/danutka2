@@ -63,8 +63,9 @@ $conn = mysqli_connect('localhost', 'root', '', 'bmi');
 	                    $data_pomiaru = date("Y-m-d");
 	
 	                    $zap2 = "INSERT INTO wynik (bmi_id, data_pomiaru, wynik) VALUES ($bmi_id, '$data_pomiaru', $bmi);";
-	                    $result2 = mysqli_query($conn, $zap2);
+	                    $$wynik2 = mysqli_query($conn, $zap2);
                }
+               mysqli_close($conn);
 
         ?>
     </section>
