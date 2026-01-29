@@ -34,7 +34,7 @@ table{
     width:80%;
     border: 1px dotted white;
 }
-th:hover{
+tr:hover{
     background-color: #D3D3D3;
     color: black;
 }
