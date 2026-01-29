@@ -1,0 +1,2 @@
+Zapytanie 1: SELECT wart_min, wart_max, informacja FROM bmi;
+Zapytanie 2: INSERT INTO wynik (bmi_id, data_pomiaru, wynik) VALUES (3, '2020-05-10', 27);
