@@ -23,7 +23,11 @@ $conn = mysqli_connect('localhost', 'root', '', 'bmi');
                 <th>Wartość maksymalna</th>
             </tr>
             <?php
-                #skrypt1
+                $zap1="SELECT informacja, wart_min, wart_max FROM bmi";
+                $wynik1=mysqli_query($conn, $zap1);
+                while($wiersz=mysqli_fetch_array($wynik1)){
+                    echo "<tr><td>$wiersz[0]</td><td>$wiersz[1]</td><td>$wiersz[2]</td></tr>";
+                }
             ?>
         </table>
     </main>
@@ -35,7 +39,33 @@ $conn = mysqli_connect('localhost', 'root', '', 'bmi');
             <button type="submit"> Oblicz i zapamiętaj wynik</button>   
         </form>
         <?php
-            #skrypt2
+               if(!empty($_POST["waga"]) && !empty($_POST["wzrost"])) {
+	                    $waga = $_POST["waga"]??NULL;
+	                    $wzrost = $_POST["wzrost"]??NULL;
+	
+	                    echo "Twoja waga: $waga; Twój wzrost: $wzrost<br>";
+	                    $bmi = 10000 * ($waga / ($wzrost * $wzrost));
+	                    echo "Bmi wynosi: $bmi";
+	
+	                    if ($bmi < 18) {
+	                        $bmi_id = 1;
+	                    }
+                        elseif ($bmi >= 19 && $bmi <= 25) {
+	                        $bmi_id = 2;
+	                    }
+	                    elseif ($bmi >= 26 && $bmi <= 30) {
+	                        $bmi_id = 3;
+	                    }
+	                    elseif ($bmi > 30) {
+	                        $bmi_id = 4;
+	                    }
+	
+	                    $data_pomiaru = date("Y-m-d");
+	
+	                    $zap2 = "INSERT INTO wynik (bmi_id, data_pomiaru, wynik) VALUES ($bmi_id, '$data_pomiaru', $bmi);";
+	                    $result2 = mysqli_query($conn, $zap2);
+               }
+
         ?>
     </section>
     <section id="prawy">
