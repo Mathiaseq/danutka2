@@ -1,72 +1,47 @@
 <!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Odloty samolotów</title>
-        <link rel="stylesheet" href="styl6.css">
-    </head>
-    <body>
-        <div id="baner1">
-            <h2>Odloty z lotniska</h2>
-        </div>
-
-        <div id="baner2">
-            <img src="zad6.png" alt="logotyp">
-        </div>
-
-        <main>
-            <h4>tabela odlotów</h4>
-            <table>
-                <tr>
-                    <th>lp.</th>
-                    <th>numer rejsu</th>
-                    <th>czas</th>
-                    <th>kierunek</th>
-                    <th>status</th>
-                </tr>
-                <?php
-                    // Skrypt #1
-                    $conn = new mysqli("localhost","root","","egzamin");
-
-                    $sql = "SELECT id, nr_rejsu, czas, kierunek, status_lotu FROM odloty ORDER BY czas DESC;";
-                    $result = $conn->query($sql);
-
-                    while($row = $result -> fetch_array()) {
-                        echo "<tr>";
-                            echo "<td>$row[0]</td>";
-                            echo "<td>$row[1]</td>";
-                            echo "<td>$row[2]</td>";
-                            echo "<td>$row[3]</td>";
-                            echo "<td>$row[4]</td>";
-                        echo "</tr>";
-                    }
-
-                    $conn -> close();
-                ?>
-            </table>
-        </main>
-
-        <div id="stopka1">
-            <a href="kw1.jpg">Pobierz obraz</a>
-        </div>
-
-        <div id="stopka2">
-        <?php
-            // Skrypt #2
-            if(!isset($_COOKIE['visit'])){
-                setcookie('visit', time(), time() + 3600);
-                echo '<div id="stopka2"><p><em>Dzień dobry! Sprawdź regulamin naszej strony.</em></p></div>';
-            }
-            else {
-                echo '<div id="stopka2"><p><strong>Miło nam, że nas znowu odwiedziłeś!</strong></p></div>';
-            }
-        ?>
-        </div>
-
-        <div id="stopka3">
-            Autor: 00000000000000
-        </div>
-    </body>
+<html lang="PL-pl">
+<head>
+<meta charset="UTF-8">
+<title>Odloty samolotów</title>
+<link rel="Stylesheet" type="text/css" href="styl6.css">
+</head>
+<body>
+<header id="pierwszy">
+<h2>Odloty z lotniska</h2>
+</header>
+<header id="drugi">
+<img src="zad6.png" alt="logotyp">
+</header>
+<main>
+<h4>tabela odlotów</h4>
+<table>
+	<tr><th>lp.</th><th>numer rejsu</th><th>czas</th><th>kierunek</th><th>status</th></tr>
+	<?php
+		$link=mysqli_connect('localhost','root','','egzamin');
+		$zap1="SELECT id,nr_rejsu,czas,kierunek,status_lotu FROM odloty ORDER BY czas DESC";
+		$wynik1=mysqli_query($link, $zap1);
+		while($komorka=mysqli_fetch_array($wynik1)){
+			echo "<tr><td>$komorka[0]</td><td>$komorka[1]</td><td>$komorka[2]</td><td>$komorka[3]</td><td>$komorka[4]</td></tr>";
+		}
+		mysqli_close($link);
+	?>
+</table>
+</main>
+<footer id="lewy">
+<a href="kw1.jpg" target="_blank">Pobierz obraz</a>
+</footer>
+<footer id="srodkowy">
+<?php
+	if(!isset($_COOKIE['odloty'])){
+		setcookie('odloty',1,time()+3600,);
+		echo "<p><em>Dzień dobry! Sprawdź regulamin naszej strony</em></p>";
+	}else{
+		echo "<p><strong>Miło nam, że nas znowu nas odwiedziłeś</strong></p>";
+	}
+?>
+</footer>
+<footer id="prawy">
+Autor: 123123123
+</footer>
+</body>
 </html>
