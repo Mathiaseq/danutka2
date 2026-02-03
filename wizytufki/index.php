@@ -1,70 +1,50 @@
-<?php
-    $conn = mysqli_connect("localhost","root","","firma1");
-?>
-
 <!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wizytówki</title>
-        <link rel="stylesheet" href="styl4.css">
-    </head>
-    <body>
-        <header>
-            <h1>Wizytówki pracowników</h1>
-            <form action="index.php" method="post">
-                <input type="number" name="wizytowka" id="wizytowka" min="1" max="9" value="1" required>
-                <button type="submit" name="wyswietl">WYŚWIETL</button>
-            </form>
-        </header>
-
-        <main>
-            <?php
-                if(isset($_POST["wyswietl"]) && isset($_POST["wizytowka"])) {
-                    $wizytowka = $_POST["wizytowka"];
-
-                    $sql = "SELECT id, imie, nazwisko, adres, miasto FROM pracownicy WHERE id = $wizytowka;";
-                    $result = $conn->query($sql);
-    
-                    while($row = $result -> fetch_array()) {
-                        echo "<img src='".$row["id"].".jpg' alt='pracownik'>";
-                        echo "<h2>".$row["imie"]." ".$row["nazwisko"]."</h2>";
-                        echo "<h4>Adres:</h4>";
-                        echo "<p>".$row["adres"].", ".$row["miasto"]."</p>";
-                    }
-                }
-                else {
-                    echo "<h2>Wybierz wizytówkę</h2>";
-                }
-            ?>
-        </main>
-
-        <div id="footer1">
-            <img src="obraz.jpg" alt="pracownicy firmy">
-        </div>
-
-        <div id="footer2">
-            <p>Autorem wizytówek jest pusia z netherytu</p>
-            <a href="http://agencjareklamowa543.pl/" target="_blank">Zobacz nasze realizacje</a>
-        </div>
-
-        <div id="footer3">
-            <p>Osoby proszone o podpisanie dokumentu RODO:</p>
-            <ol>
-            <?php
-                $sql = "SELECT imie, nazwisko FROM pracownicy WHERE czyRODO = 0;";
-                $result = $conn->query($sql);
-
-                while($row = $result -> fetch_array()) {
-                    echo "<li>".$row["imie"]." ".$row["nazwisko"]."</li>";
-                }
-            ?>
-            </ol>
-        </div>
-    </body>
-</html>
-
+<html lang="PL-pl">
+<head>
+<meta charset="utf-8">
+<title>Wizytówki</title>
+<link rel="stylesheet" type="text/css" href="styl4.css">
+</head>
+<body>
+<header>
+<h1>Wizytówki pracownicze</h1>
+<form action="index.php" method="POST">
+<input type="number" min="1" max="9" value="1" name="nr">
+<button type="submit" name="submit">WYŚWIETL</button>
+</form>
+</header>
+<section id="wizytowka">
 <?php
-    mysqli_close($conn);
+$link=mysqli_connect("localhost","root","","firma2");
+$liczba=isset($_POST['nr'])?(int)$_POST['nr']:1;
+
+$zap1="SELECT `id`, `imie`, `nazwisko`, `adres`, `miasto` FROM `pracownicy` WHERE id='$liczba'";
+$wynik1=mysqli_query($link,$zap1);
+while($dane1=mysqli_fetch_array($wynik1)){
+echo"<img src='$dane1[0].jpg' alt='pracownik'><h2>$dane1[1] $dane1[2]</h2><h4>Adres:</h4><p>$dane1[3], $dane1[4]</p>";	
+
+}
 ?>
+</section>
+<footer id="lewa">
+<img src="obraz.jpg" alt="pracownicy firmy">
+</footer>
+<footer id="srodkowa">
+<p>Autorem wizytownika jest:000000000000000000</p>
+<a href="http://agencjareklamowa543.pl/" target="_blank">Zobacz nasze realizacje</a>
+</footer>
+<footer id="prawa">
+<p>Osoby proszone o podpisanie dokumentu RODO:</p>
+<ol>
+<?php
+$zap2="SELECT `imie`, `nazwisko` FROM `pracownicy` WHERE czyRODO=0;";
+$wynik2=mysqli_query($link,$zap2);
+while($dane2=mysqli_fetch_array($wynik2)){
+	echo"<li>$dane2[0] $dane2[1]</li>";
+}
+mysqli_close($link);
+?>
+</ol> 
+</footer>
+</body>
+</html>
