@@ -36,7 +36,7 @@
 
         <div id="lewy">
             <p>Podaj pozycję zawodników (1-bramkarze, 2-obrońcy, 3-pomocnicy, 4-napastinicy):</p>
-            <form action="futbol.php" method="post">
+            <form action="futbol.php" method="POST">
                 <input type="number" name="zawodnik" id="zawodnik">
                 <button type="submit">Sprawdź</button>
             </form>
