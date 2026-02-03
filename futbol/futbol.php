@@ -20,9 +20,9 @@
         <div id="mecze">
             <?php
                 $sql = "SELECT zespol1, zespol2, wynik, data_rozgrywki FROM rozgrywka WHERE zespol1 = 'EVG';";
-                $result = $conn->query($sql);
+                $result = mysqli_query($conn, $sql);
 
-                while($row = $result -> fetch_array()) {
+                while($row = mysqli_fetch_array($result)) {
                     echo "<div class='mecz'>";
                         echo "<h3>$row[0] - $row[1]</h3>";
                         echo "<h4>$row[2]</h4>";
@@ -47,10 +47,10 @@
                     $zawodnik = $_POST["zawodnik"];
 
                     $sql = "SELECT imie, nazwisko FROM zawodnik WHERE pozycja_id = $zawodnik;";
-                    $result = $conn->query($sql);
-    
+                    $result = mysqli_query($conn, $sql);
+
                     echo "<ul>";
-                    while($row = $result -> fetch_array()) {
+                    while($row = mysqli_fetch_array($result)) {
                         echo "<li><p>$row[0] $row[1]</p></li>";
                     }
                     echo "</ul>";
@@ -66,5 +66,5 @@
 </html>
 
 <?php
-    $conn -> close();
+    mysqli_close($conn);
 ?>
