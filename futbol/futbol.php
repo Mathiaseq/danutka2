@@ -58,7 +58,7 @@
 
         <div id="prawy">
             <img src="zad1.png" alt="piłkarz">
-            <p>Autor: <a href="https://ee-informatyk.pl/" target="_blank" style="color: unset;text-decoration: none;">EE-Informatyk.pl</a></p>
+            <p>Autor: 489018318390</p>
         </div>
     </body>
 </html>
