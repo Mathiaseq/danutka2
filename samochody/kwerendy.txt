@@ -1,0 +1,2 @@
+3. SELECT pojazdy.marka, pojazdy.model, pojazdy.cena, kolory.nazwa, kolory.doplata FROM pojazdy JOIN kolory ON pojazdy.kolor = kolory.id;
+4. SELECT marka, model, cena FROM pojazdy ORDER BY RAND() LIMIT 2;
