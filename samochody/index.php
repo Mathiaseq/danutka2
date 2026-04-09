@@ -35,8 +35,7 @@
                 <tr>
                     <th colspan="2">Konfiguracja</th>
                     <th>Cena</th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <td colspan="3"><img src="a1.jpg" alt="Konfiguracja 1"></td>
                 </tr>
                 <?php
