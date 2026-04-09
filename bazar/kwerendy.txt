@@ -1,0 +1,4 @@
+zap1 SELECT nazwa,plik FROM `towar` LIMIT 10; 
+zap2 SELETC id, nazwa FROM `towar`;
+zap3 SELECT rodzaj,nazwa,cena FROM `towar` WHERE id=1;
+zap4 INSERT INTO `zamowienie`(`id_towar`, `id_sklep`, `liczba_kg`) VALUES (9,2,20);

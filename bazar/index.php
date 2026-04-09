@@ -15,8 +15,17 @@
             <img src="market.png" alt="bazarek">
         </aside>
         <section>
-
+            <p>Wybierz owoc lub warzywo i podaj jego wagę:</p>
+            <form action="index.php" method="POST">
+                <select name="">
+                    skrypt3
+                <input type="number" step="1" name="">
+                <button type="submit">Zamów</button>
+            </form>
         </section>
     </main>
+    <footer>
+        <p>Stronę opracował: 3198371897</p>
+    </footer>
 </body>
 </html>
